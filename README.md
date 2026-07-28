@@ -1,4 +1,4 @@
-# krantasclub.lt
+# pervalka.lt
 
 npm install
 npm run build

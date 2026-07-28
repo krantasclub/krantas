@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import WaveDivider from "./WaveDivider";
 import TicketButtons from "./TicketButtons";
@@ -35,11 +36,12 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 sm:gap-8">
             <div>
               <div className="flex items-center gap-3">
-                <img
-                  src="/logo-round.png"
+                <Image
+                  src="/logo-round.webp"
                   alt="Krantas"
-                  width={960}
-                  height={960}
+                  width={96}
+                  height={96}
+                  loading="lazy"
                   className="h-11 w-11 sm:h-12 sm:w-12 rounded-full shadow-[0_6px_16px_rgba(0,0,0,0.45)]"
                 />
                 <p className="font-display text-3xl sm:text-4xl leading-none">

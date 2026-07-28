@@ -1,11 +1,12 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
 const PHOTOS = [
-  { id: "photo-1", src: "/location/photo-1.jpg", rotate: -3 },
-  { id: "photo-2", src: "/location/photo-2.jpg", rotate: 2 },
-  { id: "map", src: "/location/map.jpg", rotate: -2 },
-  { id: "directions", src: "/location/directions.jpg", rotate: 3 },
+  { id: "photo-1", src: "/location/photo-1.webp", rotate: -3 },
+  { id: "photo-2", src: "/location/photo-2.webp", rotate: 2 },
+  { id: "map", src: "/location/map.webp", rotate: -2 },
+  { id: "directions", src: "/location/directions.webp", rotate: 3 },
 ];
 
 export default function LocationSection() {
@@ -21,10 +22,12 @@ export default function LocationSection() {
                 className="relative w-full aspect-[3/4] max-w-[260px] overflow-hidden border border-[var(--line)] shadow-[0_14px_34px_rgba(0,0,0,0.5)]"
                 style={{ transform: `rotate(${p.rotate}deg)` }}
               >
-                <img
+                <Image
                   src={p.src}
                   alt=""
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 45vw, 260px"
+                  className="object-cover"
                   loading="lazy"
                 />
               </div>

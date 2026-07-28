@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import NextImage from "next/image";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 
@@ -242,7 +243,7 @@ export default function AboutAdmin() {
             <label className={lbl}>Photo (optional)</label>
             {about.image_url && (
               <div className="relative w-full max-w-[220px] aspect-[4/5] mb-3 overflow-hidden border border-[rgba(236,231,221,0.2)]">
-                <img src={about.image_url} alt="" className="w-full h-full object-cover" />
+                <NextImage src={about.image_url} alt="" fill sizes="220px" className="object-cover" />
               </div>
             )}
             <input

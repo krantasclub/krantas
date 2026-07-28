@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { useScrollY } from "@/hooks/useScrollY";
 import { sponsors } from "@/lib/content";
 
@@ -46,18 +47,20 @@ function LogoWall() {
   return (
     <div className="relative flex flex-col items-center gap-6 sm:gap-8 px-6 sm:px-10 w-full max-w-6xl mx-auto">
       {primary && (
-        <img
+        <Image
           src={primary.src}
           alt={primary.name}
+          width={primary.width}
+          height={primary.height}
           className="max-h-10 sm:max-h-16 lg:max-h-20 max-w-[140px] sm:max-w-[220px] lg:max-w-[260px] w-auto h-auto object-contain"
         />
       )}
       <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-x-6 gap-y-6 sm:gap-x-10 sm:gap-y-8 lg:gap-x-8 w-full">
         {rest.map((s) => (
-          <img key={s.id} src={s.src} alt={s.name} className={logoClass} />
+          <Image key={s.id} src={s.src} alt={s.name} width={s.width} height={s.height} className={logoClass} />
         ))}
         {redbull && (
-          <img src={redbull.src} alt={redbull.name} className={logoClass} />
+          <Image src={redbull.src} alt={redbull.name} width={redbull.width} height={redbull.height} className={logoClass} />
         )}
       </div>
     </div>

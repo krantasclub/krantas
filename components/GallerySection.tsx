@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 import { galleryImages as fallbackGalleryImages, type GalleryImage } from "@/lib/content";
 import Reveal from "./Reveal";
 
@@ -27,10 +28,12 @@ function Strip({
             aria-label={`Open ${img.alt}`}
             className="relative shrink-0 w-[260px] sm:w-[340px] aspect-video mx-2.5 sm:mx-4 overflow-hidden border border-[var(--line)] shadow-[0_10px_30px_rgba(0,0,0,0.45)] hover:border-[var(--accent)] transition-colors cursor-zoom-in"
           >
-            <img
+            <Image
               src={img.src}
               alt={img.alt}
-              className="w-full h-full object-cover grayscale-[15%]"
+              fill
+              sizes="(max-width: 640px) 260px, 340px"
+              className="object-cover grayscale-[15%]"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />

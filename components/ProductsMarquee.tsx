@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { sponsors } from "@/lib/content";
 
 // Static (non-scrolling) sponsor wall. Logos are black-background
@@ -22,10 +23,12 @@ export default function ProductsMarquee() {
 
       <div className="relative max-w-[1600px] mx-auto flex flex-wrap items-center justify-center gap-x-10 sm:gap-x-16 gap-y-8 sm:gap-y-10 px-5 sm:px-8">
         {wall.map((s, i) => (
-          <img
+          <Image
             key={`${s.id}-${i}`}
             src={s.src}
             alt={s.name}
+            width={s.width}
+            height={s.height}
             className="h-20 sm:h-32 lg:h-40 w-auto object-contain mix-blend-screen"
             loading="lazy"
           />

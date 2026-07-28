@@ -185,7 +185,7 @@ function VenueReel() {
           (which is baked into the same element) and flashing to black. */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/hero-poster.jpg)" }}
+        style={{ backgroundImage: "url(/hero-poster.webp)" }}
       />
       <video
         ref={videoRef}

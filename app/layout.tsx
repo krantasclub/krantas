@@ -86,6 +86,12 @@ export default async function RootLayout({
   const [episodes, reels] = await Promise.all([getRadioEpisodes(), getReels()]);
   return (
     <html lang="lt">
+      <head>
+        {/* Hero poster is set via CSS background-image (not <img>/next/image),
+            so the browser can't discover it until CSS is parsed. It's the
+            LCP element on the homepage, so preload it explicitly. */}
+        <link rel="preload" as="image" href="/hero-poster.webp" fetchPriority="high" />
+      </head>
       <body className={`${anton.variable} ${inter.variable} ${plexMono.variable}`}>
         <SiteChrome initialEpisodes={episodes} initialReels={reels}>{children}</SiteChrome>
       </body>

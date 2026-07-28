@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { AboutContent, Stat } from "@/lib/content";
 import Reveal from "./Reveal";
 import StatsStrip from "./StatsStrip";
@@ -50,10 +51,12 @@ export default function AboutSection({ content, stats }: { content: AboutContent
           {content.imageUrl && (
             <Reveal delay={120}>
               <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden border border-[var(--line)] shadow-[0_14px_34px_rgba(0,0,0,0.5)]">
-                <img
+                <Image
                   src={content.imageUrl}
                   alt={content.heading}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 448px"
+                  className="object-cover"
                   loading="lazy"
                 />
               </div>

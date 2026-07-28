@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { isDirectReelUrl, type Reel } from "@/lib/content";
 import ReelLightbox from "./ReelLightbox";
 
@@ -12,7 +13,14 @@ function CardFace({ reel }: { reel: Reel }) {
       <div className="absolute inset-0 grain opacity-40" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-black/20" />
       {reel.thumbnailUrl && (
-        <img src={reel.thumbnailUrl} alt="" className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" loading="lazy" />
+        <Image
+          src={reel.thumbnailUrl}
+          alt=""
+          fill
+          sizes="(max-width: 640px) 168px, 220px"
+          className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+          loading="lazy"
+        />
       )}
 
       <span className="absolute inset-0 flex items-center justify-center">

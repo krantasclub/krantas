@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useScrollY } from "@/hooks/useScrollY";
@@ -43,11 +44,12 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
     >
       <div className="max-w-[1600px] mx-auto flex items-center justify-between px-5 sm:px-8 h-16 sm:h-20">
         <Link href="/" className="flex items-center gap-2.5">
-          <img
-            src="/logo-round.png"
+          <Image
+            src="/logo-round.webp"
             alt="Krantas"
-            width={960}
-            height={960}
+            width={88}
+            height={88}
+            priority
             className="h-10 w-10 sm:h-11 sm:w-11 rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.55),0_0_0_1px_rgba(236,231,221,0.12)]"
           />
           <span className="font-display text-2xl sm:text-3xl tracking-wide">

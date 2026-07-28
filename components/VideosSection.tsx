@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import { videos as fallbackVideos, getYouTubeId, isDirectVideoUrl, type Video } from "@/lib/content";
 import Reveal from "./Reveal";
 
@@ -43,7 +44,14 @@ function VideoCard({
               className="absolute inset-0 w-full h-full"
             >
               {video.thumbnailUrl && (
-                <img src={video.thumbnailUrl} alt="" className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" loading="lazy" />
+                <Image
+                  src={video.thumbnailUrl}
+                  alt=""
+                  fill
+                  sizes="340px"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
               )}
               <div className="absolute inset-0 grain opacity-40" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/30" />
@@ -76,17 +84,21 @@ function VideoCard({
           ) : (
             <button onClick={onPlay} aria-label={`Play ${video.title}`} className="absolute inset-0 w-full h-full">
               {video.thumbnailUrl ? (
-                <img
+                <Image
                   src={video.thumbnailUrl}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                  fill
+                  sizes="340px"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
                 />
               ) : youtubeId ? (
-                <img
+                <Image
                   src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
                   alt=""
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                  fill
+                  sizes="340px"
+                  className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
                 />
               ) : isFile ? (
