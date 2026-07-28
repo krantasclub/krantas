@@ -446,6 +446,26 @@ Rather than chasing trends, we invest in resident artists, immersive sound, and 
 Years on, Krantas is still run by the same small crew that started it, still based in Klaipėda, and still building nights around DJs and live acts we'd want to hear ourselves.`,
 };
 
+// Backs the scrolling strip below the header and the text-only
+// "statement" section between the Videos and Gallery carousels on the
+// homepage, editable from /admin/homepage.
+export type HomepageContent = {
+  marqueeText: string;
+  statementEyebrow: string;
+  statementHeading: string;
+  statementBody: string;
+};
+
+// Placeholder copy — shown only until real text is saved in
+// /admin/homepage (backed by Supabase).
+export const homepageContentFallback: HomepageContent = {
+  marqueeText: "Riptide · 09 Aug — doors 23:00, Krantas main floor",
+  statementEyebrow: "Build by the water. Driven by the sound.",
+  statementHeading: "Powerful sound, industrial surroundings, and people who come for the music",
+  statementBody:
+    "Rather than chasin trends, we invest in resident artists, immersive sound, and nights that evolve naturally - from the first record to the final track.",
+};
+
 export type Stat = {
   id: string;
   value: string;

@@ -13,6 +13,8 @@ import {
   galleryImages as fallbackGalleryImages,
   aboutFallback,
   type AboutContent,
+  homepageContentFallback,
+  type HomepageContent,
   stats as fallbackStats,
   type Stat,
   type Poster,
@@ -484,6 +486,31 @@ export async function getAboutContent(): Promise<AboutContent> {
     .maybeSingle();
   if (error || !data) return aboutFallback;
   return rowToAbout(data as AboutRow);
+}
+
+// ---- Homepage marquee + statement section ------------------------------
+
+type HomepageContentRow = {
+  marquee_text: string | null;
+  statement_eyebrow: string | null;
+  statement_heading: string | null;
+  statement_body: string | null;
+};
+
+export async function getHomepageContent(): Promise<HomepageContent> {
+  const { data, error } = await supabaseServer
+    .from("homepage_content")
+    .select("*")
+    .eq("id", 1)
+    .maybeSingle();
+  if (error || !data) return homepageContentFallback;
+  const r = data as HomepageContentRow;
+  return {
+    marqueeText: r.marquee_text || homepageContentFallback.marqueeText,
+    statementEyebrow: r.statement_eyebrow || homepageContentFallback.statementEyebrow,
+    statementHeading: r.statement_heading || homepageContentFallback.statementHeading,
+    statementBody: r.statement_body || homepageContentFallback.statementBody,
+  };
 }
 
 // ---- Site stats strip -------------------------------------------------

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { homepageContentFallback } from "@/lib/content";
 
 // A deliberately text-only beat between the two card carousels (Sets
 // and Gallery). Its job is pacing, not content density — a place for
@@ -19,7 +20,15 @@ const EXIT_VH = 30; // reveal finishes once the section's top reaches this far d
 const LINE_STAGGER_PX = 60; // how far apart (in scroll px) each line's reveal starts
 const SLIDE_DISTANCE_PX = 140; // how far each line travels — big enough to read as emerging from above
 
-export default function StatementSection() {
+export default function StatementSection({
+  eyebrow = homepageContentFallback.statementEyebrow,
+  heading = homepageContentFallback.statementHeading,
+  body = homepageContentFallback.statementBody,
+}: {
+  eyebrow?: string;
+  heading?: string;
+  body?: string;
+}) {
   const ref = useRef<HTMLElement | null>(null);
   const [rectTop, setRectTop] = useState<number | null>(null);
 
@@ -120,22 +129,19 @@ export default function StatementSection() {
 
       <div className="relative max-w-3xl mx-auto text-center">
         <p className="eyebrow mb-6" style={lineStyle(0)}>
-          Build by the water. Driven by the sound.
+          {eyebrow}
         </p>
         <p
           className="font-display text-3xl sm:text-5xl lg:text-6xl leading-[1.05] text-balance"
           style={lineStyle(1)}
         >
-          Powerful sound, industrial surroundings, and people who come for the
-          music
+          {heading}
         </p>
         <p
           className="mt-8 sm:mt-10 max-w-xl mx-auto text-sm sm:text-base text-[var(--ink)]/70"
           style={lineStyle(2)}
         >
-          Rather than chasin trends, we invest in resident artists, immersive
-          sound, and nights that evolve naturally - from the first record to the
-          final track.
+          {body}
         </p>
       </div>
     </section>

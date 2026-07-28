@@ -7,6 +7,7 @@ const sections = [
   {
     group: "Site content",
     items: [
+      { href: "/admin/homepage", icon: "▬", label: "Homepage", desc: "Scrolling strip text and the statement section below the videos" },
       { href: "/admin/releases", icon: "◈", label: "Releases", desc: "Label discography, cover art and tracklists" },
       { href: "/admin/artists", icon: "♫", label: "Artists", desc: "Roster shown on the homepage and Artists page" },
       { href: "/admin/events", icon: "◆", label: "Events", desc: "Featured, upcoming and past line-up" },

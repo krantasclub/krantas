@@ -6,7 +6,7 @@ import StatementSection from "@/components/StatementSection";
 import GallerySection from "@/components/GallerySection";
 import PartnersRevealSection from "@/components/PartnersRevealSection";
 import LocationSection from "@/components/LocationSection";
-import { getArtists, getVideos, getGalleryImages } from "@/lib/data";
+import { getArtists, getVideos, getGalleryImages, getHomepageContent } from "@/lib/data";
 
 export const revalidate = 60;
 
@@ -27,14 +27,23 @@ export const revalidate = 60;
 // the viewport (see ReelsTab in the root layout) instead of taking a
 // slot in the scroll.
 export default async function Home() {
-  const [artists, videos, galleryImages] = await Promise.all([getArtists(), getVideos(), getGalleryImages()]);
+  const [artists, videos, galleryImages, homepageContent] = await Promise.all([
+    getArtists(),
+    getVideos(),
+    getGalleryImages(),
+    getHomepageContent(),
+  ]);
   return (
     <>
       <Hero />
-      <Marquee text="Riptide · 09 Aug — doors 23:00, Krantas main floor" />
+      <Marquee text={homepageContent.marqueeText} />
       <ArtistsSection initialRoster={artists} />
       <VideosSection initialItems={videos} />
-      <StatementSection />
+      <StatementSection
+        eyebrow={homepageContent.statementEyebrow}
+        heading={homepageContent.statementHeading}
+        body={homepageContent.statementBody}
+      />
       <GallerySection initialImages={galleryImages} />
       <PartnersRevealSection />
       <LocationSection />
