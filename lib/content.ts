@@ -437,8 +437,8 @@ export type AboutContent = {
 // /admin/about (backed by Supabase).
 export const aboutFallback: AboutContent = {
   eyebrow: "Our story",
-  heading: "Underground music by the shore",
-  subheading: "Built by the water. Driven by the sound.",
+  heading: "Underground music in Klaipėda, by the shore",
+  subheading: "Built by the water in Klaipėda. Driven by the sound.",
   body: `Krantas opened as a home for the sounds we couldn't find anywhere else on the coast — techno, breaks and bass played loud, on a system built for it, in a room that doesn't pretend to be anything other than a warehouse by the port.
 
 Rather than chasing trends, we invest in resident artists, immersive sound, and nights that evolve naturally — from the first record to the final track. Every booking and every corner of the room is shaped by the same idea: the music comes first.
