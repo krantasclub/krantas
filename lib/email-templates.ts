@@ -29,9 +29,16 @@ export type OrderEmailData = {
   customerName: string;
   customerEmail: string;
   customerPhone?: string | null;
+  deliveryMethod?: string | null;
   shippingAddress?: string | null;
   notes?: string | null;
   createdAt: Date;
+};
+
+const DELIVERY_METHOD_LABEL: Record<string, string> = {
+  pickup: "Pickup at a show",
+  address: "Delivery address",
+  locker: "DPD parcel locker",
 };
 
 function row(label: string, value?: string | null) {
@@ -99,6 +106,7 @@ export function adminOrderEmail(order: OrderEmailData) {
       ${row("Buyer", order.customerName)}
       ${row("Email", `<a href="mailto:${order.customerEmail}" style="color:${COLORS.accent};text-decoration:none;">${order.customerEmail}</a>`)}
       ${row("Phone", order.customerPhone)}
+      ${row("Delivery", order.deliveryMethod ? DELIVERY_METHOD_LABEL[order.deliveryMethod] ?? order.deliveryMethod : null)}
       ${row("Ship to", order.shippingAddress)}
       ${row("Notes", order.notes)}
       ${row("Received", order.createdAt.toLocaleString("lt-LT", { dateStyle: "medium", timeStyle: "short" }))}
@@ -285,6 +293,8 @@ export function customerOrderEmail(order: OrderEmailData) {
       ${row("Price", order.priceLabel)}
       ${row("Size", order.size)}
       ${row("Quantity", String(order.quantity))}
+      ${row("Delivery", order.deliveryMethod ? DELIVERY_METHOD_LABEL[order.deliveryMethod] ?? order.deliveryMethod : null)}
+      ${row("Ship to", order.shippingAddress)}
     </table>
     <p style="margin:24px 0 0;font:13px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:${COLORS.inkDim};">
       Questions about your order? Just reply to this email.

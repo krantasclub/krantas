@@ -14,6 +14,7 @@ type OrderRow = {
   customer_name: string;
   customer_email: string;
   customer_phone: string | null;
+  delivery_method: string | null;
   shipping_address: string | null;
   notes: string | null;
   status: string;
@@ -152,6 +153,12 @@ export default function OrdersAdmin() {
                   <a href={`mailto:${o.customer_email}`} className="text-[#ff8a1e]">{o.customer_email}</a>
                 </div>
                 {o.customer_phone && <div><span className="text-[#9aa19d]">Phone: </span>{o.customer_phone}</div>}
+                {o.delivery_method && (
+                  <div>
+                    <span className="text-[#9aa19d]">Delivery: </span>
+                    {{ pickup: "Pickup at a show", address: "Delivery address", locker: "DPD parcel locker" }[o.delivery_method] ?? o.delivery_method}
+                  </div>
+                )}
                 {o.shipping_address && <div><span className="text-[#9aa19d]">Ship to: </span>{o.shipping_address}</div>}
               </div>
 

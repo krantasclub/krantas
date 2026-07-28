@@ -2,10 +2,17 @@
 
 import { useEffect, useState } from "react";
 import type { Merch } from "@/lib/content";
+import StoreLockerSelector, { type LockerPoint } from "./StoreLockerSelector";
 
 const INPUT_CLS =
   "w-full bg-transparent border-0 border-b border-[var(--line-strong)] text-[var(--ink)] py-2 text-sm outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[var(--ink-dim)]";
 const LABEL_CLS = "block font-mono text-[9px] uppercase tracking-[0.16em] text-[var(--ink-dim)] mb-1.5";
+
+const DELIVERY_METHODS = [
+  { id: "pickup", label: "Pickup at a show" },
+  { id: "address", label: "Delivery address" },
+  { id: "locker", label: "DPD parcel locker" },
+] as const;
 
 export default function StoreOrderModal({ product, onClose }: { product: Merch; onClose: () => void }) {
   const [size, setSize] = useState(product.sizes?.[0] ?? "");
@@ -13,7 +20,9 @@ export default function StoreOrderModal({ product, onClose }: { product: Merch; 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [deliveryMethod, setDeliveryMethod] = useState<(typeof DELIVERY_METHODS)[number]["id"]>("address");
   const [address, setAddress] = useState("");
+  const [locker, setLocker] = useState<LockerPoint | null>(null);
   const [notes, setNotes] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -38,6 +47,10 @@ export default function StoreOrderModal({ product, onClose }: { product: Merch; 
       setError("Please choose a size.");
       return;
     }
+    if (deliveryMethod === "locker" && !locker) {
+      setError("Please choose a DPD parcel locker.");
+      return;
+    }
     setSubmitting(true);
     try {
       const res = await fetch("/api/store/order", {
@@ -50,7 +63,13 @@ export default function StoreOrderModal({ product, onClose }: { product: Merch; 
           customerName: name,
           customerEmail: email,
           customerPhone: phone,
-          shippingAddress: address,
+          deliveryMethod,
+          shippingAddress: deliveryMethod === "address" ? address : null,
+          lockerId: deliveryMethod === "locker" ? locker?.id : null,
+          lockerLabel:
+            deliveryMethod === "locker" && locker
+              ? `${locker.name}, ${locker.street}, ${locker.city} ${locker.postalCode}`
+              : null,
           notes,
         }),
       });
@@ -174,14 +193,48 @@ export default function StoreOrderModal({ product, onClose }: { product: Merch; 
                   <label className={LABEL_CLS}>Email</label>
                   <input required type="email" className={INPUT_CLS} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
                 </div>
-                <div>
+                <div className="sm:col-span-2">
                   <label className={LABEL_CLS}>Phone (optional)</label>
                   <input className={INPUT_CLS} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+370..." />
                 </div>
-                <div>
-                  <label className={LABEL_CLS}>Delivery address (optional)</label>
-                  <input className={INPUT_CLS} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Or leave blank to arrange pickup" />
+              </div>
+
+              <div className="mb-4">
+                <label className={LABEL_CLS}>Delivery</label>
+                <div className="flex flex-wrap gap-2">
+                  {DELIVERY_METHODS.map((m) => (
+                    <button
+                      type="button"
+                      key={m.id}
+                      onClick={() => {
+                        setDeliveryMethod(m.id);
+                        if (m.id !== "locker") setLocker(null);
+                      }}
+                      className={`font-mono text-xs uppercase tracking-[0.08em] px-3 py-1.5 border transition-colors ${
+                        deliveryMethod === m.id
+                          ? "border-[var(--accent)] text-[var(--accent)]"
+                          : "border-[var(--line-strong)] text-[var(--ink-dim)] hover:text-[var(--ink)]"
+                      }`}
+                    >
+                      {m.label}
+                    </button>
+                  ))}
                 </div>
+
+                {deliveryMethod === "address" && (
+                  <div className="mt-3">
+                    <label className={LABEL_CLS}>Delivery address</label>
+                    <input className={INPUT_CLS} value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Street, city, postal code" />
+                  </div>
+                )}
+
+                {deliveryMethod === "locker" && <StoreLockerSelector value={locker} onChange={setLocker} />}
+
+                {deliveryMethod === "pickup" && (
+                  <p className="mt-2 font-mono text-[11px] leading-relaxed text-[var(--ink-dim)]">
+                    We&apos;ll hold it for you at the next Krantas night — we&apos;ll email to confirm.
+                  </p>
+                )}
               </div>
 
               <div className="mb-5">

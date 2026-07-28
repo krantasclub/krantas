@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "lt-ringaudu-rimi-dpd-pastomatas-131",
+    "name": "Ringaudų Rimi DPD paštomatas 131",
+    "street": "VARŽUPIO G. 1",
+    "city": "Akademija",
+    "postalCode": "53348"
+  },
+  {
+    "id": "lt-akmenes-norfa-dpd-pastomatas-214",
+    "name": "Akmenės Norfa DPD paštomatas 214",
+    "street": "S. DAUKANTO G. 7A",
+    "city": "Akmenė",
+    "postalCode": "85370"
+  },
+  {
+    "id": "lt-jazminu-lidl-dpd-pastomatas-276",
+    "name": "Jazminų Lidl DPD paštomatas 276",
+    "street": "JAZMINŲ G. 32A",
+    "city": "Alytus",
+    "postalCode": "63188"
+  },
+  {
+    "id": "lt-jonyno-norfa-dpd-pastomatas-313",
+    "name": "Jonyno Norfa DPD paštomatas 313",
+    "street": "JONYNO G. 10C",
+    "city": "Alytus",
+    "postalCode": "62374"
+  },
+  {
+    "id": "lt-jurgiskiu-norfa-pastomatas-388",
+    "name": "Jurgiškių Norfa paštomatas 388",
+    "street": "JURGIŠKIŲ G. 2",
+    "city": "Alytus",
+    "postalCode": "63131"
+  },
+  {
+    "id": "lt-merkines-aibe-dpd-pastomatas-360",
+    "name": "Merkinės Aibė DPD paštomatas 360",
+    "street": "MERKINĖS G. 52",
+    "city": "Alytus",
+    "postalCode": "62251"
+  },
+  {
+    "id": "lt-naujoji-iki-dpd-pastomatas-239",
+    "name": "Naujoji IKI DPD paštomatas 239",
+    "street": "NAUJOJI G. 2C",
+    "city": "Alytus",
+    "postalCode": "62116"
+  },
+  {
+    "id": "lt-pc-arena-dpd-pastomatas-034",
+    "name": "PC Arena DPD paštomatas 034",
+    "street": "ŪDRIJOS G. 1",
+    "city": "Alytus",
+    "postalCode": "62411"
+  },
+  {
+    "id": "lt-santaikos-maxima-pastomatas-127",
+    "name": "Santaikos Maxima paštomatas 127",
+    "street": "SANTAIKOS G. 34G",
+    "city": "Alytus",
+    "postalCode": "62123"
+  },
+  {
+    "id": "lt-santaikos-moki-vezi-dpd-pastom-429",
+    "name": "Santaikos MOKI-VEŽI DPD paštom 429",
+    "street": "SANTAIKOS G. 26B",
+    "city": "Alytus",
+    "postalCode": "62122"
+  },
+  {
+    "id": "lt-antezeriu-rimi-dpd-pastomatas-301",
+    "name": "Antežerių Rimi DPD paštomatas 301",
+    "street": "ŽIRGŲ G. 24",
+    "city": "Antežeriai",
+    "postalCode": "14158"
+  },
+  {
+    "id": "lt-anyksciu-maxima-dpd-pastomatas-066",
+    "name": "Anykščių Maxima DPD paštomatas 066",
+    "street": "A BARANAUSKO A. 4",
+    "city": "Anykščiai",
+    "postalCode": "29132"
+  },
+  {
+    "id": "lt-anyksciu-norfa-dpd-pastomatas-186",
+    "name": "Anykščių Norfa DPD paštomatas 186",
+    "street": "ŽIBURIO G. 12",
+    "city": "Anykščiai",
+    "postalCode": "29120"
+  },
+  {
+    "id": "lt-ariogalos-maxima-pastomatas-228",
+    "name": "Ariogalos Maxima paštomatas 228",
+    "street": "TAURUPIO G. 15A",
+    "city": "Ariogala",
+    "postalCode": "60251"
+  },
+  {
+    "id": "lt-aukstadvario-maxima-pastomatas-261",
+    "name": "Aukštadvario Maxima paštomatas 261",
+    "street": "VILNIAUS G. 15",
+    "city": "Aukštadvaris",
+    "postalCode": "21255"
+  },
+  {
+    "id": "lt-avizieniu-maxima-pastomatas-200",
+    "name": "Avižienių Maxima paštomatas 200",
+    "street": "SAULĖS G. 1",
+    "city": "Avižieniai",
+    "postalCode": "14184"
+  },
+  {
+    "id": "lt-baisogalos-gausa-pastomatas-157",
+    "name": "Baisogalos Gausa paštomatas 157",
+    "street": "MAIRONIO G. 44",
+    "city": "Baisogala",
+    "postalCode": "82321"
+  },
+  {
+    "id": "lt-bajoru-silas-dpd-pastomatas-355",
+    "name": "Bajorų Šilas DPD paštomatas 355",
+    "street": "ŠAULIO G. 70",
+    "city": "Bajorai",
+    "postalCode": "14189"
+  },
+  {
+    "id": "lt-baltosios-vokes-aibe-pastomatas-268",
+    "name": "Baltosios Vokės Aibė paštomatas 268",
+    "street": "VILNIAUS G. 14",
+    "city": "Baltoji Vokė",
+    "postalCode": "17234"
+  },
+  {
+    "id": "lt-birstonas-norfa-pastomatas-176",
+    "name": "Birštonas Norfa paštomatas 176",
+    "street": "SRUOGOS G. 25",
+    "city": "Birštonas",
+    "postalCode": "59209"
+  },
+  {
+    "id": "lt-kestucio-aibe-dpd-pastomatas-422",
+    "name": "Kęstučio Aibė DPD paštomatas 422",
+    "street": "KĘSTUČIO G. 18",
+    "city": "Biržai",
+    "postalCode": "41176"
+  },
+  {
+    "id": "lt-respublikos-norfa-pastomatas-278",
+    "name": "Respublikos Norfa paštomatas 278",
+    "street": "RESPUBLIKOS G. 1B",
+    "city": "Biržai",
+    "postalCode": "41111"
+  },
+  {
+    "id": "lt-sirvenos-iki-dpd-pastomatas-024",
+    "name": "Širvėnos IKI DPD paštomatas 024",
+    "street": "VYTAUTO G. 27",
+    "city": "Biržai",
+    "postalCode": "41173"
+  },
+  {
+    "id": "lt-dercekliu-rimi-dpd-pastomatas-130",
+    "name": "Derceklių Rimi DPD paštomatas 130",
+    "street": "NIDOS G. 1",
+    "city": "Dercekliai",
+    "postalCode": "96383"
+  },
+  {
+    "id": "lt-didziasalio-aibe-dpd-pastom-336",
+    "name": "Didžiasalio Aibė DPD paštom 336",
+    "street": "AGARINIO G. 13",
+    "city": "Didžiasalis",
+    "postalCode": "30155"
+  },
+  {
+    "id": "lt-domeikava-rimi-dpd-pastomatas-185",
+    "name": "Domeikava Rimi DPD paštomatas 185",
+    "street": "VANDŽIOGALOS PL. 112",
+    "city": "Domeikava",
+    "postalCode": "54349"
+  },
+  {
+    "id": "lt-domeikavos-iki-dpd-pastom-321",
+    "name": "Domeikavos IKI DPD paštom 321",
+    "street": "ĮGULOS G. 1. ŠAKIŲ K.. KAUNO R.",
+    "city": "Domeikava",
+    "postalCode": "54358"
+  },
+  {
+    "id": "lt-ciurlionio-maxima-pastom-054",
+    "name": "Čiurlionio MAXIMA paštom 054",
+    "street": "M. K. ČIURLIONIO G. 99",
+    "city": "Druskininkai",
+    "postalCode": "66162"
+  },
+  {
+    "id": "lt-ciurlionio-topo-centro-pastom-358",
+    "name": "Čiurlionio Topo centro paštom 358",
+    "street": "M. K. ČIURLIONIO G. 55",
+    "city": "Druskininkai",
+    "postalCode": "66164"
+  },
+  {
+    "id": "lt-veisieju-g-maxima-pastomatas-167",
+    "name": "Veisiejų g. Maxima paštomatas 167",
+    "street": "VEISIEJŲ G. 31",
+    "city": "Druskininkai",
+    "postalCode": "66245"
+  },
+  {
+    "id": "lt-pc-agro-dpd-pastomatas-330",
+    "name": "PC Agro DPD paštomatas 330",
+    "street": "K. BŪGOS G. 14",
+    "city": "Dusetos",
+    "postalCode": "32304"
+  },
+  {
+    "id": "lt-eisiskiu-norfa-dpd-pastomatas-213",
+    "name": "Eišiškių Norfa DPD paštomatas 213",
+    "street": "VILNIAUS G. 19",
+    "city": "Eišiškės",
+    "postalCode": "17169"
+  },
+  {
+    "id": "lt-elektrenu-maxima-pastomatas-053",
+    "name": "Elektrėnų MAXIMA paštomatas 053",
+    "street": "RUNGOS G. 4",
+    "city": "Elektrėnai",
+    "postalCode": "26109"
+  },
+  {
+    "id": "lt-sabaliskiu-norfa-pastomatas-161",
+    "name": "Sabališkių Norfa paštomatas 161",
+    "street": "SABALIŠKIŲ G. 1J",
+    "city": "Elektrėnai",
+    "postalCode": "26128"
+  },
+  {
+    "id": "lt-ezerelio-express-pastomatas-257",
+    "name": "Ežerėlio Express paštomatas 257",
+    "street": "KAUNO G. 18A",
+    "city": "Ežerėlis",
+    "postalCode": "53393"
+  },
+  {
+    "id": "lt-galgiu-maxima-dpd-pastomatas-206",
+    "name": "Galgių Maxima DPD paštomatas 206",
+    "street": "CENTRINĖ G. 36",
+    "city": "Galgiai",
+    "postalCode": "13104"
+  },
+  {
+    "id": "lt-galgiu-norfa-dpd-pastomatas-389",
+    "name": "Galgių Norfa DPD paštomatas 389",
+    "street": "MOKYKLOS G. 2C",
+    "city": "Galgiai",
+    "postalCode": "13102"
+  },
+  {
+    "id": "lt-gargzdu-iki-dpd-pastomatas-181",
+    "name": "Gargždų IKI DPD paštomatas 181",
+    "street": "KLAIPĖDOS G. 60",
+    "city": "Gargždai",
+    "postalCode": "96124"
+  },
+  {
+    "id": "lt-klaipedos-g-maxima-pastomatas-042",
+    "name": "Klaipėdos g. MAXIMA paštomatas 042",
+    "street": "KLAIPĖDOS G. 37",
+    "city": "Gargždai",
+    "postalCode": "96143"
+  },
+  {
+    "id": "lt-vasario-16-aibe-dpd-pastom-411",
+    "name": "Vasario 16 Aibė DPD paštom 411",
+    "street": "VASARIO 16-OSIOS G. 45",
+    "city": "Gargždai",
+    "postalCode": "96119"
+  },
+  {
+    "id": "lt-jonuciu-norfa-dpd-pastom-099",
+    "name": "Jonučių Norfa DPD paštom 099",
+    "street": "ATGIMIMO G. 1. JONUČIAI",
+    "city": "Garliava",
+    "postalCode": "53253"
+  },
+  {
+    "id": "lt-vytauto-savas-kampas-pastom-396",
+    "name": "Vytauto Savas Kampas paštom 396",
+    "street": "VYTAUTO G. 36",
+    "city": "Garliava",
+    "postalCode": "53262"
+  },
+  {
+    "id": "lt-ginkunu-maxima-dpd-pastomatas-208",
+    "name": "Ginkūnų Maxima DPD paštomatas 208",
+    "street": "RASOS G. 1",
+    "city": "Ginkūnai",
+    "postalCode": "81494"
+  },
+  {
+    "id": "lt-giraites-maxima-dpd-pastomatas-312",
+    "name": "Giraitės Maxima DPD paštomatas 312",
+    "street": "AUTOMAGISTRALĖS G. 4",
+    "city": "Giraitė",
+    "postalCode": "54310"
+  },
+  {
+    "id": "lt-grigiskiu-maxima-pastomatas-078",
+    "name": "Grigiškių Maxima paštomatas 078",
+    "street": "KOVO 11-OSIOS G. 38B",
+    "city": "Grigiškės",
+    "postalCode": "27114"
+  },
+  {
+    "id": "lt-lentvario-g-norfa-dpd-pastom-359",
+    "name": "Lentvario g. Norfa DPD paštom 359",
+    "street": "LENTVARIO G. 2A",
+    "city": "Grigiškės",
+    "postalCode": "27102"
+  },
+  {
+    "id": "lt-gudienos-aibe-dpd-pastomatas-348",
+    "name": "Gudienos Aibė DPD paštomatas 348",
+    "street": "ŽASLIŲ G. 51",
+    "city": "Gudiena",
+    "postalCode": "56105"
+  },
+  {
+    "id": "lt-aukstaiciu-cia-market-pastom-347",
+    "name": "Aukštaičių Čia Market paštom 347",
+    "street": "AUKŠTAIČIŲ G. 14",
+    "city": "Ignalina",
+    "postalCode": "30105"
+  },
+  {
+    "id": "lt-taikos-g-maxima-pastomatas-165",
+    "name": "Taikos g. Maxima paštomatas 165",
+    "street": "TAIKOS G. 11",
+    "city": "Ignalina",
+    "postalCode": "30125"
+  },
+  {
+    "id": "lt-jaku-aibe-dpd-pastomatas-338",
+    "name": "Jakų Aibė DPD paštomatas 338",
+    "street": "BIČIŲ G. 37",
+    "city": "Jakai",
+    "postalCode": "96325"
+  },
+  {
+    "id": "lt-jasiunu-koops-dpd-pastomatas-212",
+    "name": "Jašiūnų Koops DPD paštomatas 212",
+    "street": "BALINSKIO G. 2",
+    "city": "Jašiūnai",
+    "postalCode": "17249"
+  },
+  {
+    "id": "lt-chemiku-norfa-dpd-pastomatas-179",
+    "name": "Chemikų Norfa DPD paštomatas 179",
+    "street": "CHEMIKŲ G. 2",
+    "city": "Jonava",
+    "postalCode": "55255"
+  },
+  {
+    "id": "lt-plento-maxima-dpd-pastomatas-249",
+    "name": "Plento Maxima DPD paštomatas 249",
+    "street": "PLENTO G. 3",
+    "city": "Jonava",
+    "postalCode": "55195"
+  },
+  {
+    "id": "lt-vasario-16-rimi-dpd-pastomatas-150",
+    "name": "Vasario 16 Rimi DPD paštomatas 150",
+    "street": "VASARIO 16-OSIOS G. 4",
+    "city": "Jonava",
+    "postalCode": "55158"
+  },
+  {
+    "id": "lt-zeimiu-norfa-dpd-pastomatas-407",
+    "name": "Žeimių Norfa DPD paštomatas 407",
+    "street": "ŽEIMIŲ G. 26A",
+    "city": "Jonava",
+    "postalCode": "55118"
+  },
+  {
+    "id": "lt-upytes-maxima-dpd-pastomatas-047",
+    "name": "Upytės MAXIMA DPD paštomatas 047",
+    "street": "UPYTĖS G. 19",
+    "city": "Joniškis",
+    "postalCode": "84132"
+  },
+  {
+    "id": "lt-vilniaus-g-norfa-pastomatas-188",
+    "name": "Vilniaus g. Norfa paštomatas 188",
+    "street": "VILNIAUS G. 47B",
+    "city": "Joniškis",
+    "postalCode": "84166"
+  },
+  {
+    "id": "lt-josvainiu-aibe-dpd-pastomatas-332",
+    "name": "Josvainių Aibė DPD paštomatas 332",
+    "street": "ARIOGALOS G. 2",
+    "city": "Josvainiai",
+    "postalCode": "58187"
+  },
+  {
+    "id": "lt-algirdo-maxima-dpd-pastomatas-234",
+    "name": "Algirdo Maxima DPD paštomatas 234",
+    "street": "ALGIRDO G. 1A",
+    "city": "Jurbarkas",
+    "postalCode": "74133"
+  },
+  {
+    "id": "lt-jurbarko-iki-dpd-pastom-023",
+    "name": "Jurbarko IKI DPD paštom 023",
+    "street": "DARIAUS IR GIRĖNO G. 25",
+    "city": "Jurbarkas",
+    "postalCode": "74127"
+  },
+  {
+    "id": "lt-gedimino-maxima-dpd-pastomatas-052",
+    "name": "Gedimino MAXIMA DPD paštomatas 052",
+    "street": "GEDIMINO G. 110",
+    "city": "Kaišiadorys",
+    "postalCode": "56156"
+  },
+  {
+    "id": "lt-kaisiadoriu-norfa-pastomatas-197",
+    "name": "Kaišiadorių Norfa paštomatas 197",
+    "street": "GEDIMINO G. 140",
+    "city": "Kaišiadorys",
+    "postalCode": "56167"
+  },
+  {
+    "id": "lt-maironio-norfa-dpd-pastomatas-408",
+    "name": "Maironio Norfa DPD paštomatas 408",
+    "street": "MAIRONIO G. 1",
+    "city": "Kaišiadorys",
+    "postalCode": "56126"
+  },
+  {
+    "id": "lt-kalotes-express-dpd-pastom-340",
+    "name": "Kalotės Express DPD paštom 340",
+    "street": "NAUJOJI G. 29",
+    "city": "Kalotė",
+    "postalCode": "92284"
+  },
+  {
+    "id": "lt-kalvarijos-iki-dpd-pastom-380",
+    "name": "Kalvarijos IKI DPD paštom 380",
+    "street": "DARIAUS IR GIRĖNO G. 25",
+    "city": "Kalvarija",
+    "postalCode": "69216"
+  },
+  {
+    "id": "lt-karmelavos-express-pastomatas-256",
+    "name": "Karmėlavos Express paštomatas 256",
+    "street": "VILNIAUS G. 54",
+    "city": "Karmėlava",
+    "postalCode": "54449"
+  },
+  {
+    "id": "lt-ateities-pl-iki-dpd-pastom-368",
+    "name": "Ateities pl. IKI DPD paštom 368",
+    "street": "ATEITIES PL. 4A",
+    "city": "Kaunas",
+    "postalCode": "52322"
+  },
+  {
+    "id": "lt-baltijos-rimi-dpd-pastomatas-095",
+    "name": "Baltijos Rimi DPD paštomatas 095",
+    "street": "BALTIJOS G. 58",
+    "city": "Kaunas",
+    "postalCode": "48221"
+  },
+  {
+    "id": "lt-baltu-lidl-dpd-pastomatas-290",
+    "name": "Baltų Lidl DPD paštomatas 290",
+    "street": "BALTŲ PR. 10",
+    "city": "Kaunas",
+    "postalCode": "48165"
+  },
+  {
+    "id": "lt-barsausko-circle-k-pastomatas-083",
+    "name": "Baršausko Circle K paštomatas 083",
+    "street": "K. BARŠAUSKO G. 57",
+    "city": "Kaunas",
+    "postalCode": "51423"
+  },
+  {
+    "id": "lt-barsausko-lidl-pastomatas-292",
+    "name": "Baršausko Lidl paštomatas 292",
+    "street": "BARŠAUSKO G. 66C",
+    "city": "Kaunas",
+    "postalCode": "51436"
+  },
+  {
+    "id": "lt-breslaujos-iki-dpd-pastomatas-367",
+    "name": "Breslaujos IKI DPD paštomatas 367",
+    "street": "BRESLAUJOS G. 3A",
+    "city": "Kaunas",
+    "postalCode": "44403"
+  },
+  {
+    "id": "lt-dainavos-rimi-dpd-pastomatas-016",
+    "name": "Dainavos Rimi DPD paštomatas 016",
+    "street": "V. KRĖVĖS PR. 43",
+    "city": "Kaunas",
+    "postalCode": "49440"
+  },
+  {
+    "id": "lt-europos-rimi-dpd-pastomatas-033",
+    "name": "Europos RIMI DPD paštomatas 033",
+    "street": "EUROPOS PR. 43",
+    "city": "Kaunas",
+    "postalCode": "46329"
+  },
+  {
+    "id": "lt-girstupio-iki-dpd-pastomatas-126",
+    "name": "Girstupio IKI DPD paštomatas 126",
+    "street": "KOVO 11-OSIOS G. 22",
+    "city": "Kaunas",
+    "postalCode": "51349"
+  },
+  {
+    "id": "lt-jonavos-g-maxima-pastomatas-011",
+    "name": "Jonavos g. Maxima paštomatas 011",
+    "street": "JONAVOS G. 60",
+    "city": "Kaunas",
+    "postalCode": "44192"
+  },
+  {
+    "id": "lt-juozapaviciaus-norfa-pastomat-098",
+    "name": "Juozapavičiaus Norfa paštomat 098",
+    "street": "A. JUOZAPAVIČIAUS PR. 84",
+    "city": "Kaunas",
+    "postalCode": "45267"
+  },
+  {
+    "id": "lt-juozapaviciaus-rimi-pastom-018",
+    "name": "Juozapavičiaus Rimi paštom 018",
+    "street": "A. JUOZAPAVIČIAUS PR. 11",
+    "city": "Kaunas",
+    "postalCode": "45251"
+  },
+  {
+    "id": "lt-kreves-maxima-dpd-pastomatas-210",
+    "name": "Krėvės Maxima DPD paštomatas 210",
+    "street": "V. KRĖVĖS PR. 108",
+    "city": "Kaunas",
+    "postalCode": "50381"
+  },
+  {
+    "id": "lt-lituanica-iki-dpd-pastomatas-170",
+    "name": "Lituanica IKI DPD paštomatas 170",
+    "street": "JONAVOS G. 3",
+    "city": "Kaunas",
+    "postalCode": "44269"
+  },
+  {
+    "id": "lt-lubinu-silas-dpd-pastomatas-328",
+    "name": "Lubinų Šilas DPD paštomatas 328",
+    "street": "LUBINŲ G. 155",
+    "city": "Kaunas",
+    "postalCode": "47222"
+  },
+  {
+    "id": "lt-mariu-express-market-pastomat-248",
+    "name": "Marių Express Market paštomat 248",
+    "street": "MARIŲ G. 2",
+    "city": "Kaunas",
+    "postalCode": "52263"
+  },
+  {
+    "id": "lt-masiulio-maxima-dpd-pastomatas-164",
+    "name": "Masiulio Maxima DPD paštomatas 164",
+    "street": "T. MASIULIO G. 16E",
+    "city": "Kaunas",
+    "postalCode": "52375"
+  },
+  {
+    "id": "lt-naujakuriu-maxima-pastomatas-226",
+    "name": "Naujakurių Maxima paštomatas 226",
+    "street": "NAUJAKURIŲ G. 31",
+    "city": "Kaunas",
+    "postalCode": "47118"
+  },
+  {
+    "id": "lt-paneriu-silas-dpd-pastomatas-404",
+    "name": "Panerių Šilas DPD paštomatas 404",
+    "street": "PANERIŲ G. 58A",
+    "city": "Kaunas",
+    "postalCode": "48349"
+  },
+  {
+    "id": "lt-pc-akropolis-dpd-pastomatas-119",
+    "name": "PC Akropolis DPD paštomatas 119",
+    "street": "KARALIAUS MINDAUGO PR. 49",
+    "city": "Kaunas",
+    "postalCode": "44333"
+  },
+  {
+    "id": "lt-pc-mega-dpd-pastomatas-059",
+    "name": "PC Mega DPD paštomatas 059",
+    "street": "ISLANDIJOS PL. 32",
+    "city": "Kaunas",
+    "postalCode": "47446"
+  },
+  {
+    "id": "lt-pc-savas-dpd-pastomatas-112",
+    "name": "PC SAVAS DPD paštomatas 112",
+    "street": "SAVANORIŲ PR. 346",
+    "city": "Kaunas",
+    "postalCode": "49450"
+  },
+  {
+    "id": "lt-petrausko-express-pastomatas-121",
+    "name": "Petrausko Express paštomatas 121",
+    "street": "K. PETRAUSKO G. 6",
+    "city": "Kaunas",
+    "postalCode": "44149"
+  },
+  {
+    "id": "lt-pramones-ermitazas-pastomatas-259",
+    "name": "Pramonės Ermitažas paštomatas 259",
+    "street": "PRAMONĖS PR. 6B",
+    "city": "Kaunas",
+    "postalCode": "51267"
+  },
+  {
+    "id": "lt-raudondvario-maxima-pastomatas-162",
+    "name": "Raudondvario Maxima paštomatas 162",
+    "street": "RAUDONDVARIO PL. 284A",
+    "city": "Kaunas",
+    "postalCode": "47158"
+  },
+  {
+    "id": "lt-raudondvario-rimi-pastomatas-069",
+    "name": "Raudondvario Rimi paštomatas 069",
+    "street": "RAUDONDVARIO PL. 94B",
+    "city": "Kaunas",
+    "postalCode": "47180"
+  },
+  {
+    "id": "lt-roku-maxima-dpd-pastomatas-230",
+    "name": "Rokų Maxima DPD paštomatas 230",
+    "street": "ROKŲ G. 17",
+    "city": "Kaunas",
+    "postalCode": "46114"
+  },
+  {
+    "id": "lt-romainiu-rimi-dpd-pastomatas-122",
+    "name": "Romainių Rimi DPD paštomatas 122",
+    "street": "ROMAINIŲ G. 67C",
+    "city": "Kaunas",
+    "postalCode": "47221"
+  },
+  {
+    "id": "lt-sapokos-silas-dpd-pastomatas-254",
+    "name": "Šapokos Šilas DPD paštomatas 254",
+    "street": "A. ŠAPOKOS G. 38",
+    "city": "Kaunas",
+    "postalCode": "47251"
+  },
+  {
+    "id": "lt-savanoriu-iki-dpd-pastomatas-008",
+    "name": "Savanorių IKI DPD paštomatas 008",
+    "street": "SAVANORIŲ PR. 111",
+    "city": "Kaunas",
+    "postalCode": "44146"
+  },
+  {
+    "id": "lt-savanoriu-pr-219-lidl-pastom-417",
+    "name": "Savanorių pr. 219 Lidl paštom 417",
+    "street": "SAVANORIŲ PR. 219",
+    "city": "Kaunas",
+    "postalCode": "50182"
+  },
+  {
+    "id": "lt-savanoriu-pr-315-lidl-pastom-288",
+    "name": "Savanorių pr. 315 Lidl paštom 288",
+    "street": "SAVANORIŲ PR. 315",
+    "city": "Kaunas",
+    "postalCode": "50122"
+  },
+  {
+    "id": "lt-savanoriu-rimi-dpd-pastomatas-010",
+    "name": "Savanorių RIMI DPD paštomatas 010",
+    "street": "SAVANORIŲ PR. 321",
+    "city": "Kaunas",
+    "postalCode": "50120"
+  },
+  {
+    "id": "lt-seniavos-pl-silas-pastomatas-392",
+    "name": "Seniavos pl. Šilas paštomatas 392",
+    "street": "SENIAVOS PL. 36",
+    "city": "Kaunas",
+    "postalCode": "46380"
+  },
+  {
+    "id": "lt-siaures-iki-dpd-pastomatas-035",
+    "name": "Šiaurės IKI DPD paštomatas 035",
+    "street": "ŠIAURĖS PR. 91",
+    "city": "Kaunas",
+    "postalCode": "49218"
+  },
+  {
+    "id": "lt-siaures-lidl-dpd-pastomatas-287",
+    "name": "Šiaurės Lidl DPD paštomatas 287",
+    "street": "ŠIAURĖS PR. 1A",
+    "city": "Kaunas",
+    "postalCode": "49188"
+  },
+  {
+    "id": "lt-siaures-norfa-dpd-pastomatas-319",
+    "name": "Šiaurės Norfa DPD paštomatas 319",
+    "street": "ŠIAURĖS PR. 44",
+    "city": "Kaunas",
+    "postalCode": "49227"
+  },
+  {
+    "id": "lt-silas-taikos-dpd-pastomatas-141",
+    "name": "Šilas Taikos DPD paštomatas 141",
+    "street": "TAIKOS PR. 31A",
+    "city": "Kaunas",
+    "postalCode": "50229"
+  },
+  {
+    "id": "lt-sprangausko-silas-pastomatas-215",
+    "name": "Sprangausko Šilas paštomatas 215",
+    "street": "K. SPRANGAUSKO G. 1A",
+    "city": "Kaunas",
+    "postalCode": "46499"
+  },
+  {
+    "id": "lt-studentu-rimi-dpd-pastomatas-187",
+    "name": "Studentų Rimi DPD paštomatas 187",
+    "street": "STUDENTŲ G. 19",
+    "city": "Kaunas",
+    "postalCode": "50240"
+  },
+  {
+    "id": "lt-taikos-iki-dpd-pastomatas-195",
+    "name": "Taikos IKI DPD paštomatas 195",
+    "street": "TAIKOS PR. 81",
+    "city": "Kaunas",
+    "postalCode": "50438"
+  },
+  {
+    "id": "lt-taubuciu-iki-dpd-pastomatas-116",
+    "name": "Taubūčių IKI DPD paštomatas 116",
+    "street": "JOTVINGIŲ G. 15",
+    "city": "Kaunas",
+    "postalCode": "48124"
+  },
+  {
+    "id": "lt-topolis-iki-dpd-pastomatas-100",
+    "name": "Topolis IKI DPD paštomatas 100",
+    "street": "SUKILĖLIŲ PR. 84",
+    "city": "Kaunas",
+    "postalCode": "49335"
+  },
+  {
+    "id": "lt-urmas-dpd-pastomatas-137",
+    "name": "Urmas DPD paštomatas 137",
+    "street": "PRAMONĖS PR. 16",
+    "city": "Kaunas",
+    "postalCode": "51185"
+  },
+  {
+    "id": "lt-vaidoto-maxima-dpd-pastomatas-354",
+    "name": "Vaidoto Maxima DPD paštomatas 354",
+    "street": "VAIDOTO G. 159",
+    "city": "Kaunas",
+    "postalCode": "45392"
+  },
+  {
+    "id": "lt-vaisvydava-iki-dpd-pastomatas-144",
+    "name": "Vaišvydava IKI DPD paštomatas 144",
+    "street": "DIDŽIOJI G. 98",
+    "city": "Kaunas",
+    "postalCode": "45462"
+  },
+  {
+    "id": "lt-vandziogalos-silas-pastomatas-216",
+    "name": "Vandžiogalos Šilas paštomatas 216",
+    "street": "VANDŽIOGALOS PL. 22",
+    "city": "Kaunas",
+    "postalCode": "47457"
+  },
+  {
+    "id": "lt-varniu-rimi-dpd-pastomatas-096",
+    "name": "Varnių Rimi DPD paštomatas 096",
+    "street": "VARNIŲ G. 41",
+    "city": "Kaunas",
+    "postalCode": "48414"
+  },
+  {
+    "id": "lt-veiveriu-lidl-dpd-pastomatas-283",
+    "name": "Veiverių Lidl DPD paštomatas 283",
+    "street": "VEIVERIŲ G. 146",
+    "city": "Kaunas",
+    "postalCode": "46354"
+  },
+  {
+    "id": "lt-vijuku-iki-dpd-pastomatas-394",
+    "name": "Vijūkų IKI DPD paštomatas 394",
+    "street": "VIJŪKŲ G. 125",
+    "city": "Kaunas",
+    "postalCode": "47240"
+  },
+  {
+    "id": "lt-zemaiciu-iki-dpd-pastomatas-009",
+    "name": "Žemaičių IKI DPD paštomatas 009",
+    "street": "ŽEMAIČIŲ PL. 23",
+    "city": "Kaunas",
+    "postalCode": "48244"
+  },
+  {
+    "id": "lt-kazlu-ruda-maxima-pastomatas-173",
+    "name": "Kazlų Rūda Maxima paštomatas 173",
+    "street": "M.VALANČIAUS G. 7",
+    "city": "Kazlų Rūda",
+    "postalCode": "69443"
+  },
+  {
+    "id": "lt-skvero-norfa-dpd-pastomatas-413",
+    "name": "Skvero Norfa DPD paštomatas 413",
+    "street": "SKVERO G. 11",
+    "city": "Kazlų Rūda",
+    "postalCode": "69422"
+  },
+  {
+    "id": "lt-didzioji-maxima-dpd-pastom-051",
+    "name": "Didžioji MAXIMA DPD paštom 051",
+    "street": "J. BASANAVIČIAUS G. 53",
+    "city": "Kėdainiai",
+    "postalCode": "57283"
+  },
+  {
+    "id": "lt-geguciu-iki-dpd-pastomatas-296",
+    "name": "Gegučių IKI DPD paštomatas 296",
+    "street": "GEGUČIŲ G. 13",
+    "city": "Kėdainiai",
+    "postalCode": "57461"
+  },
+  {
+    "id": "lt-kedainiai-maxima-pastom-174",
+    "name": "Kėdainiai Maxima paštom 174",
+    "street": "S.DARIAUS IR S.GIRĖNO G. 50A",
+    "city": "Kėdainiai",
+    "postalCode": "57153"
+  },
+  {
+    "id": "lt-p-luksio-iki-dpd-pastomatas-410",
+    "name": "P. Lukšio IKI DPD paštomatas 410",
+    "street": "P. LUKŠIO G. 1A",
+    "city": "Kėdainiai",
+    "postalCode": "57198"
+  },
+  {
+    "id": "lt-stoties-maxima-dpd-pastom-125",
+    "name": "Stoties Maxima DPD paštom 125",
+    "street": "J. BASANAVIČIAUS G. 93",
+    "city": "Kėdainiai",
+    "postalCode": "57354"
+  },
+  {
+    "id": "lt-kelmes-norfa-dpd-pastomatas-027",
+    "name": "Kelmės Norfa DPD paštomatas 027",
+    "street": "S. ŠILINGO G. 5",
+    "city": "Kelmė",
+    "postalCode": "86135"
+  },
+  {
+    "id": "lt-kooperacijos-maxima-pastom-366",
+    "name": "Kooperacijos Maxima paštom 366",
+    "street": "KOOPERACIJOS G. 41",
+    "city": "Kelmė",
+    "postalCode": "86136"
+  },
+  {
+    "id": "lt-ketvergiu-rimi-dpd-pastomatas-374",
+    "name": "Ketvergių Rimi DPD paštomatas 374",
+    "street": "KLAIPĖDOS G. 48",
+    "city": "Ketvergiai",
+    "postalCode": "95410"
+  },
+  {
+    "id": "lt-audros-maxima-dpd-pastomatas-373",
+    "name": "Audros Maxima DPD paštomatas 373",
+    "street": "AUDROS G. 6B",
+    "city": "Klaipėda",
+    "postalCode": "92278"
+  },
+  {
+    "id": "lt-avitela-dpd-pastomatas-091",
+    "name": "Avitela DPD paštomatas 091",
+    "street": "TAIKOS PR. 15",
+    "city": "Klaipėda",
+    "postalCode": "91235"
+  },
+  {
+    "id": "lt-h-manto-maxima-dpd-pastom-356",
+    "name": "H. Manto Maxima DPD paštom 356",
+    "street": "H. MANTO G. 11",
+    "city": "Klaipėda",
+    "postalCode": "92130"
+  },
+  {
+    "id": "lt-kretingos-g-iki-pastomatas-263",
+    "name": "Kretingos g. IKI paštomatas 263",
+    "street": "KRETINGOS G. 83",
+    "city": "Klaipėda",
+    "postalCode": "92327"
+  },
+  {
+    "id": "lt-liepojos-rimi-dpd-pastomatas-218",
+    "name": "Liepojos Rimi DPD paštomatas 218",
+    "street": "LIEPOJOS G. 27",
+    "city": "Klaipėda",
+    "postalCode": "92334"
+  },
+  {
+    "id": "lt-liepu-pc-dpd-pastomatas-155",
+    "name": "Liepų PC DPD paštomatas 155",
+    "street": "LIEPŲ G. 81",
+    "city": "Klaipėda",
+    "postalCode": "92195"
+  },
+  {
+    "id": "lt-mogiliovo-cia-market-pastom-325",
+    "name": "Mogiliovo Čia Market paštom 325",
+    "street": "MOGILIOVO G. 12",
+    "city": "Klaipėda",
+    "postalCode": "95221"
+  },
+  {
+    "id": "lt-nidos-g-iki-dpd-pastomatas-224",
+    "name": "Nidos g. IKI DPD paštomatas 224",
+    "street": "NIDOS G. 5",
+    "city": "Klaipėda",
+    "postalCode": "93194"
+  },
+  {
+    "id": "lt-pajurio-rimi-dpd-pastomatas-258",
+    "name": "Pajūrio Rimi DPD paštomatas 258",
+    "street": "PAJŪRIO G. 5A",
+    "city": "Klaipėda",
+    "postalCode": "92347"
+  },
+  {
+    "id": "lt-pc-akropolis-dpd-pastomatas-114",
+    "name": "PC Akropolis DPD paštomatas 114",
+    "street": "TAIKOS PR. 61",
+    "city": "Klaipėda",
+    "postalCode": "91182"
+  },
+  {
+    "id": "lt-pc-banginis-dpd-pastomatas-113",
+    "name": "PC Banginis DPD paštomatas 113",
+    "street": "ŠILUTĖS PL. 35",
+    "city": "Klaipėda",
+    "postalCode": "94105"
+  },
+  {
+    "id": "lt-pc-luize-dpd-pastomatas-120",
+    "name": "PC Luizė DPD paštomatas 120",
+    "street": "ŠIAURĖS PR. 15",
+    "city": "Klaipėda",
+    "postalCode": "92312"
+  },
+  {
+    "id": "lt-pc-molas-dpd-pastomatas-013",
+    "name": "PC MOLAS DPD paštomatas 013",
+    "street": "TAIKOS PR. 139",
+    "city": "Klaipėda",
+    "postalCode": "94284"
+  },
+  {
+    "id": "lt-pc-studlendas-dpd-pastomatas-060",
+    "name": "PC Studlendas DPD paštomatas 060",
+    "street": "H. MANTO G. 90",
+    "city": "Klaipėda",
+    "postalCode": "92295"
+  },
+  {
+    "id": "lt-pc-zarde-dpd-pastomatas-070",
+    "name": "PC Žardė DPD paštomatas 070",
+    "street": "TAIKOS PR. 115",
+    "city": "Klaipėda",
+    "postalCode": "94231"
+  },
+  {
+    "id": "lt-sauliu-iki-dpd-pastomatas-036",
+    "name": "Šaulių IKI DPD paštomatas 036",
+    "street": "ŠAULIŲ G. 11",
+    "city": "Klaipėda",
+    "postalCode": "92134"
+  },
+  {
+    "id": "lt-senoji-baldine-dpd-pastomatas-421",
+    "name": "Senoji baldinė DPD paštomatas 421",
+    "street": "TAIKOS PR. 98",
+    "city": "Klaipėda",
+    "postalCode": "93155"
+  },
+  {
+    "id": "lt-silutes-pl-maxima-pastomatas-062",
+    "name": "Šilutės pl. MAXIMA paštomatas 062",
+    "street": "ŠILUTĖS PL. 68",
+    "city": "Klaipėda",
+    "postalCode": "95116"
+  },
+  {
+    "id": "lt-silutes-pl-maxima-pastomatas-220",
+    "name": "Šilutės pl. Maxima paštomatas 220",
+    "street": "ŠILUTĖS PL. 40A",
+    "city": "Klaipėda",
+    "postalCode": "94137"
+  },
+  {
+    "id": "lt-smilteles-lidl-dpd-pastomatas-304",
+    "name": "Smiltelės Lidl DPD paštomatas 304",
+    "street": "SMILTELĖS G. 19",
+    "city": "Klaipėda",
+    "postalCode": "95186"
+  },
+  {
+    "id": "lt-taikos-lidl-dpd-pastomatas-305",
+    "name": "Taikos Lidl DPD paštomatas 305",
+    "street": "TAIKOS PR. 66B",
+    "city": "Klaipėda",
+    "postalCode": "93219"
+  },
+  {
+    "id": "lt-taikos-pc-arena-dpd-pastomatas-012",
+    "name": "Taikos PC Arena DPD paštomatas 012",
+    "street": "TAIKOS PR. 64",
+    "city": "Klaipėda",
+    "postalCode": "93226"
+  },
+  {
+    "id": "lt-taikos-technorama-pastomatas-303",
+    "name": "Taikos Technorama paštomatas 303",
+    "street": "TAIKOS PR. 39",
+    "city": "Klaipėda",
+    "postalCode": "91150"
+  },
+  {
+    "id": "lt-tilzes-circle-k-dpd-pastomatas-192",
+    "name": "Tilžės Circle K DPD paštomatas 192",
+    "street": "TILŽĖS G. 56A",
+    "city": "Klaipėda",
+    "postalCode": "91110"
+  },
+  {
+    "id": "lt-vingio-rimi-dpd-pastomatas-184",
+    "name": "Vingio RIMI DPD paštomatas 184",
+    "street": "VINGIO G. 31",
+    "city": "Klaipėda",
+    "postalCode": "95203"
+  },
+  {
+    "id": "lt-minijos-aibe-dpd-pastomatas-326",
+    "name": "Minijos Aibė DPD paštomatas 326",
+    "street": "MINIJOS G. 1",
+    "city": "Kretinga",
+    "postalCode": "97135"
+  },
+  {
+    "id": "lt-rotuses-senukai-dpd-pastomatas-419",
+    "name": "Rotušės Senukai DPD paštomatas 419",
+    "street": "ROTUŠĖS A. 13",
+    "city": "Kretinga",
+    "postalCode": "97140"
+  },
+  {
+    "id": "lt-sventosios-g-rimi-pastomatas-244",
+    "name": "Šventosios g. Rimi paštomatas 244",
+    "street": "ŠVENTOSIOS G. 27B",
+    "city": "Kretinga",
+    "postalCode": "97124"
+  },
+  {
+    "id": "lt-zemaites-maxima-dpd-pastomatas-063",
+    "name": "Žemaitės MAXIMA DPD paštomatas 063",
+    "street": "ŽEMAITĖS AL. 29",
+    "city": "Kretinga",
+    "postalCode": "97106"
+  },
+  {
+    "id": "lt-gedimino-maxima-dpd-pastomatas-132",
+    "name": "Gedimino Maxima DPD paštomatas 132",
+    "street": "GEDIMINO G. 53N",
+    "city": "Kupiškis",
+    "postalCode": "40127"
+  },
+  {
+    "id": "lt-pureno-norfa-dpd-pastomatas-352",
+    "name": "Purėno Norfa DPD paštomatas 352",
+    "street": "A. PURĖNO G. 1",
+    "city": "Kupiškis",
+    "postalCode": "40118"
+  },
+  {
+    "id": "lt-kursenu-maxima-dpd-pastomatas-081",
+    "name": "Kuršėnų Maxima DPD paštomatas 081",
+    "street": "VILNIAUS G. 43",
+    "city": "Kuršėnai",
+    "postalCode": "81137"
+  },
+  {
+    "id": "lt-vytauto-norfa-dpd-pastomatas-315",
+    "name": "Vytauto Norfa DPD paštomatas 315",
+    "street": "VYTAUTO G. 78",
+    "city": "Kuršėnai",
+    "postalCode": "81146"
+  },
+  {
+    "id": "lt-kybartu-norfa-dpd-pastomatas-225",
+    "name": "Kybartų Norfa DPD paštomatas 225",
+    "street": "VIŠTYČIO G. 40",
+    "city": "Kybartai",
+    "postalCode": "70428"
+  },
+  {
+    "id": "lt-vilniaus-g-maxima-pastomatas-172",
+    "name": "Vilniaus g. Maxima paštomatas 172",
+    "street": "VILNIAUS G. 13A",
+    "city": "Lazdijai",
+    "postalCode": "67106"
+  },
+  {
+    "id": "lt-lentvario-iki-dpd-pastomatas-104",
+    "name": "Lentvario IKI DPD paštomatas 104",
+    "street": "GELEŽINKELIO G. 38",
+    "city": "Lentvaris",
+    "postalCode": "25116"
+  },
+  {
+    "id": "lt-vytauto-g-maxima-pastomatas-205",
+    "name": "Vytauto g. Maxima paštomatas 205",
+    "street": "VYTAUTO G. 4C",
+    "city": "Lentvaris",
+    "postalCode": "25102"
+  },
+  {
+    "id": "lt-linkuvos-koops-dpd-pastomatas-342",
+    "name": "Linkuvos Koops DPD paštomatas 342",
+    "street": "VARPO G. 10",
+    "city": "Linkuva",
+    "postalCode": "83444"
+  },
+  {
+    "id": "lt-maisiagalos-maxima-pastomatas-265",
+    "name": "Maišiagalos Maxima paštomatas 265",
+    "street": "MOKYKLOS G. 3",
+    "city": "Maišiagala",
+    "postalCode": "14242"
+  },
+  {
+    "id": "lt-ausra-iki-dpd-pastomatas-152",
+    "name": "Aušra IKI DPD paštomatas 152",
+    "street": "VYTAUTO G. 48A",
+    "city": "Marijampolė",
+    "postalCode": "68296"
+  },
+  {
+    "id": "lt-baznycios-maxima-pastomatas-232",
+    "name": "Bažnyčios Maxima paštomatas 232",
+    "street": "BAŽNYČIOS G. 38",
+    "city": "Marijampolė",
+    "postalCode": "68309"
+  },
+  {
+    "id": "lt-klaipedos-g-norfa-dpd-pastom-345",
+    "name": "Klaipėdos g. Norfa DPD paštom 345",
+    "street": "KLAIPĖDOS G. 1",
+    "city": "Marijampolė",
+    "postalCode": "68266"
+  },
+  {
+    "id": "lt-marijampoles-kubas-pastomatas-341",
+    "name": "Marijampolės Kubas paštomatas 341",
+    "street": "KOSMONAUTŲ G. 51",
+    "city": "Marijampolė",
+    "postalCode": "68150"
+  },
+  {
+    "id": "lt-parko-norfa-dpd-pastomatas-383",
+    "name": "Parko Norfa DPD paštomatas 383",
+    "street": "PARKO G. 1A",
+    "city": "Marijampolė",
+    "postalCode": "68218"
+  },
+  {
+    "id": "lt-pc-arena-dpd-pastomatas-030",
+    "name": "PC Arena DPD paštomatas 030",
+    "street": "DARIAUS IR GIRĖNO G. 3A",
+    "city": "Marijampolė",
+    "postalCode": "68256"
+  },
+  {
+    "id": "lt-vilkaviskio-g-iki-pastomatas-151",
+    "name": "Vilkaviškio g. IKI paštomatas 151",
+    "street": "VILKAVIŠKIO G. 72A",
+    "city": "Marijampolė",
+    "postalCode": "68171"
+  },
+  {
+    "id": "lt-zemaites-lidl-dpd-pastomatas-298",
+    "name": "Žemaitės Lidl DPD paštomatas 298",
+    "street": "ŽEMAITĖS G. 22",
+    "city": "Marijampolė",
+    "postalCode": "68264"
+  },
+  {
+    "id": "lt-algirdo-aibe-dpd-pastomatas-364",
+    "name": "Algirdo Aibė DPD paštomatas 364",
+    "street": "ALGIRDO G. 2",
+    "city": "Mažeikiai",
+    "postalCode": "89216"
+  },
+  {
+    "id": "lt-laisves-maxima-dpd-pastomatas-223",
+    "name": "Laisvės Maxima DPD paštomatas 223",
+    "street": "LAISVĖS G. 56",
+    "city": "Mažeikiai",
+    "postalCode": "89223"
+  },
+  {
+    "id": "lt-m-dauksos-lidl-pastomatas-294",
+    "name": "M. Daukšos Lidl paštomatas 294",
+    "street": "M. DAUKŠOS G. 24A",
+    "city": "Mažeikiai",
+    "postalCode": "89234"
+  },
+  {
+    "id": "lt-ventos-iki-dpd-pastomatas-110",
+    "name": "Ventos IKI DPD paštomatas 110",
+    "street": "VENTOS G. 10B",
+    "city": "Mažeikiai",
+    "postalCode": "89171"
+  },
+  {
+    "id": "lt-zemaitijos-pc-migle-pastom-409",
+    "name": "Žemaitijos PC Miglė paštom 409",
+    "street": "ŽEMAITIJOS G. 20B",
+    "city": "Mažeikiai",
+    "postalCode": "89151"
+  },
+  {
+    "id": "lt-zemaitijos-rimi-dpd-pastomatas-044",
+    "name": "Žemaitijos RIMI DPD paštomatas 044",
+    "street": "ŽEMAITIJOS G. 38",
+    "city": "Mažeikiai",
+    "postalCode": "89153"
+  },
+  {
+    "id": "lt-moletu-norfa-dpd-pastomatas-344",
+    "name": "Molėtų Norfa DPD paštomatas 344",
+    "street": "VILNIAUS G. 99",
+    "city": "Molėtai",
+    "postalCode": "33112"
+  },
+  {
+    "id": "lt-sakalo-g-maxima-pastomatas-175",
+    "name": "Sakalo g. Maxima paštomatas 175",
+    "street": "SAKALO G. 1",
+    "city": "Molėtai",
+    "postalCode": "33133"
+  },
+  {
+    "id": "lt-narsieciu-moki-vezi-pastom-371",
+    "name": "Narsiečių MOKI-VEŽI paštom 371",
+    "street": "VYTAUTO G. 183",
+    "city": "Narsiečiai",
+    "postalCode": "53304"
+  },
+  {
+    "id": "lt-kudirkos-maxima-dpd-pastom-241",
+    "name": "Kudirkos Maxima DPD paštom 241",
+    "street": "V. KUDIRKOS G. 18",
+    "city": "Naujoji Akmenė",
+    "postalCode": "85171"
+  },
+  {
+    "id": "lt-nepriklausomybes-aibe-pastom-357",
+    "name": "Nepriklausomybės Aibė paštom 357",
+    "street": "NEPRIKLAUSOMYBĖS AL. 3",
+    "city": "Naujoji Akmenė",
+    "postalCode": "85126"
+  },
+  {
+    "id": "lt-nemencines-norfa-pastomatas-199",
+    "name": "Nemenčinės Norfa paštomatas 199",
+    "street": "VILIJOS G. 2",
+    "city": "Nemenčinė",
+    "postalCode": "15174"
+  },
+  {
+    "id": "lt-nidos-dpd-pastomatas-282",
+    "name": "Nidos DPD paštomatas 282",
+    "street": "TAIKOS G. 4A",
+    "city": "Neringa",
+    "postalCode": "93121"
+  },
+  {
+    "id": "lt-keramiku-aibe-dpd-pastomatas-395",
+    "name": "Keramikų Aibė DPD paštomatas 395",
+    "street": "KERAMIKŲ G. 7",
+    "city": "Neveronys",
+    "postalCode": "54488"
+  },
+  {
+    "id": "lt-noreikiskiu-silas-pastom-201",
+    "name": "Noreikiškių Šilas paštom 201",
+    "street": "ŠILTNAMIŲ G. 19. NOREIKIŠKĖS",
+    "city": "Noreikiškės",
+    "postalCode": "53363"
+  },
+  {
+    "id": "lt-siltnamiu-g-38-dpd-pastomatas-428",
+    "name": "Šiltnamių g. 38 DPD paštomatas 428",
+    "street": "ŠILTNAMIŲ G. 38",
+    "city": "Noreikiškės",
+    "postalCode": "53366"
+  },
+  {
+    "id": "lt-pabrades-norfa-dpd-pastomatas-190",
+    "name": "Pabradės Norfa DPD paštomatas 190",
+    "street": "MOLĖTŲ G. 4A",
+    "city": "Pabradė",
+    "postalCode": "18169"
+  },
+  {
+    "id": "lt-pagegiu-norfa-dpd-pastomatas-158",
+    "name": "Pagėgių Norfa DPD paštomatas 158",
+    "street": "VILNIAUS G. 18A",
+    "city": "Pagėgiai",
+    "postalCode": "99292"
+  },
+  {
+    "id": "lt-pagiriu-iki-dpd-pastomatas-146",
+    "name": "Pagirių IKI DPD paštomatas 146",
+    "street": "DURPIŲ G. 40",
+    "city": "Pagiriai",
+    "postalCode": "14118"
+  },
+  {
+    "id": "lt-pakruojo-maxima-dpd-pastomatas-037",
+    "name": "Pakruojo MAXIMA DPD paštomatas 037",
+    "street": "STATYBININKŲ G. 4",
+    "city": "Pakruojis",
+    "postalCode": "83163"
+  },
+  {
+    "id": "lt-klaipedos-maxima-pastomatas-153",
+    "name": "Klaipėdos Maxima paštomatas 153",
+    "street": "KLAIPĖDOS PL. 42",
+    "city": "Palanga",
+    "postalCode": "00111"
+  },
+  {
+    "id": "lt-klaipedos-pl-lidl-pastomatas-402",
+    "name": "Klaipėdos pl. Lidl paštomatas 402",
+    "street": "KLAIPĖDOS PL. 59",
+    "city": "Palanga",
+    "postalCode": "00230"
+  },
+  {
+    "id": "lt-palangos-rimi-dpd-pastomatas-025",
+    "name": "Palangos Rimi DPD paštomatas 025",
+    "street": "MALŪNO G. 10",
+    "city": "Palanga",
+    "postalCode": "00126"
+  },
+  {
+    "id": "lt-plytu-maxima-dpd-pastomatas-221",
+    "name": "Plytų Maxima DPD paštomatas 221",
+    "street": "PLYTŲ G. 9A",
+    "city": "Palanga",
+    "postalCode": "00195"
+  },
+  {
+    "id": "lt-sventosios-maxima-pastomatas-235",
+    "name": "Šventosios Maxima paštomatas 235",
+    "street": "MOKYKLOS G. 1",
+    "city": "Palanga",
+    "postalCode": "00303"
+  },
+  {
+    "id": "lt-basanaviciaus-lidl-pastom-289",
+    "name": "Basanavičiaus Lidl paštom 289",
+    "street": "J. BASANAVIČIAUS G. 67",
+    "city": "Panevėžys",
+    "postalCode": "36204"
+  },
+  {
+    "id": "lt-klaipedos-g-rimi-pastomatas-014",
+    "name": "Klaipėdos g. RIMI paštomatas 014",
+    "street": "KLAIPĖDOS G. 82",
+    "city": "Panevėžys",
+    "postalCode": "37383"
+  },
+  {
+    "id": "lt-marijonu-biciulis-pastomatas-381",
+    "name": "Marijonų Bičiulis paštomatas 381",
+    "street": "MARIJONŲ G. 25",
+    "city": "Panevėžys",
+    "postalCode": "35129"
+  },
+  {
+    "id": "lt-nemuno-norfa-dpd-pastomatas-253",
+    "name": "Nemuno Norfa DPD paštomatas 253",
+    "street": "NEMUNO G. 29B",
+    "city": "Panevėžys",
+    "postalCode": "36243"
+  },
+  {
+    "id": "lt-panevezio-rozynas-pastomatas-349",
+    "name": "Panevėžio Rožynas paštomatas 349",
+    "street": "PINIAVOS SKG. 10",
+    "city": "Panevėžys",
+    "postalCode": "37450"
+  },
+  {
+    "id": "lt-panevezio-vasaris-pastomatas-219",
+    "name": "Panevėžio Vasaris paštomatas 219",
+    "street": "AUKŠTAIČIŲ G. 88",
+    "city": "Panevėžys",
+    "postalCode": "36110"
+  },
+  {
+    "id": "lt-pc-ryo-dpd-pastomatas-079",
+    "name": "PC RYO DPD paštomatas 079",
+    "street": "SAVITIŠKIO G. 61",
+    "city": "Panevėžys",
+    "postalCode": "37189"
+  },
+  {
+    "id": "lt-ragaudziu-rimi-dpd-pastomatas-133",
+    "name": "Ragaudžių Rimi DPD paštomatas 133",
+    "street": "RAGAUDŽIŲ G. 2",
+    "city": "Panevėžys",
+    "postalCode": "36265"
+  },
+  {
+    "id": "lt-smelynes-norfa-dpd-pastomatas-134",
+    "name": "Smėlynės Norfa DPD paštomatas 134",
+    "street": "SMĖLYNĖS G. 85",
+    "city": "Panevėžys",
+    "postalCode": "35110"
+  },
+  {
+    "id": "lt-ukmerges-g-maxima-pastomatas-065",
+    "name": "Ukmergės g. Maxima paštomatas 065",
+    "street": "UKMERGĖS G. 23",
+    "city": "Panevėžys",
+    "postalCode": "35177"
+  },
+  {
+    "id": "lt-vasario-16-norfa-pastomatas-097",
+    "name": "Vasario 16 Norfa paštomatas 097",
+    "street": "VASARIO 16-OSIOS G. 55",
+    "city": "Panevėžys",
+    "postalCode": "35186"
+  },
+  {
+    "id": "lt-vilniaus-g-iki-dpd-pastomatas-400",
+    "name": "Vilniaus g. IKI DPD paštomatas 400",
+    "street": "VILNIAUS G. 60",
+    "city": "Panevėžys",
+    "postalCode": "36105"
+  },
+  {
+    "id": "lt-zara-iki-dpd-pastomatas-148",
+    "name": "Žara IKI DPD paštomatas 148",
+    "street": "DARIAUS IR GIRĖNO G. 2",
+    "city": "Panevėžys",
+    "postalCode": "37379"
+  },
+  {
+    "id": "lt-parokiskes-dpd-pastomatas-363",
+    "name": "Parokiškės DPD paštomatas 363",
+    "street": "AUŠRINĖS G. 16",
+    "city": "Parokiškė",
+    "postalCode": "42170"
+  },
+  {
+    "id": "lt-pasvalio-norfa-dpd-pastomatas-189",
+    "name": "Pasvalio Norfa DPD paštomatas 189",
+    "street": "EŽERO G. 1",
+    "city": "Pasvalys",
+    "postalCode": "39181"
+  },
+  {
+    "id": "lt-vilniaus-g-maxima-pastomatas-040",
+    "name": "Vilniaus g. Maxima paštomatas 040",
+    "street": "VILNIAUS G. 48",
+    "city": "Pasvalys",
+    "postalCode": "39177"
+  },
+  {
+    "id": "lt-dariaus-ir-gireno-norfa-pastom-314",
+    "name": "Dariaus ir Girėno Norfa paštom 314",
+    "street": "DARIAUS IR GIRĖNO G. 54",
+    "city": "Plungė",
+    "postalCode": "90169"
+  },
+  {
+    "id": "lt-turgaus-iki-dpd-pastomatas-123",
+    "name": "Turgaus IKI DPD paštomatas 123",
+    "street": "LAISVĖS G. 5",
+    "city": "Plungė",
+    "postalCode": "90156"
+  },
+  {
+    "id": "lt-vaizganto-maxima-pastomatas-043",
+    "name": "Vaižganto MAXIMA paštomatas 043",
+    "street": "J. TUMO-VAIŽGANTO G. 81",
+    "city": "Plungė",
+    "postalCode": "90160"
+  },
+  {
+    "id": "lt-priekules-pepco-dpd-pastomatas-267",
+    "name": "Priekulės Pepco DPD paštomatas 267",
+    "street": "PASAGOS G. 1A",
+    "city": "Priekulė Ii",
+    "postalCode": "96359"
+  },
+  {
+    "id": "lt-kauno-g-maxima-dpd-pastomatas-046",
+    "name": "Kauno g. MAXIMA DPD paštomatas 046",
+    "street": "KAUNO G. 34",
+    "city": "Prienai",
+    "postalCode": "59147"
+  },
+  {
+    "id": "lt-prienu-dnc-dpd-pastomatas-324",
+    "name": "Prienų DNC DPD paštomatas 324",
+    "street": "J. BASANAVIČIAUS G. 15",
+    "city": "Prienai",
+    "postalCode": "59151"
+  },
+  {
+    "id": "lt-gedimino-maxima-dpd-pastomatas-064",
+    "name": "Gedimino MAXIMA DPD paštomatas 064",
+    "street": "GEDIMINO G. 42A",
+    "city": "Radviliškis",
+    "postalCode": "82168"
+  },
+  {
+    "id": "lt-radviliskio-gruste-dpd-pastom-343",
+    "name": "Radviliškio Grūstė DPD paštom 343",
+    "street": "AUŠROS A. 3",
+    "city": "Radviliškis",
+    "postalCode": "82196"
+  },
+  {
+    "id": "lt-taikos-norfa-dpd-pastomatas-194",
+    "name": "Taikos Norfa DPD paštomatas 194",
+    "street": "TAIKOS G. 9",
+    "city": "Radviliškis",
+    "postalCode": "82128"
+  },
+  {
+    "id": "lt-ramuciu-iki-dpd-pastomatas-107",
+    "name": "Ramučių IKI DPD paštomatas 107",
+    "street": "CENTRINĖ G. 56",
+    "city": "Ramučiai",
+    "postalCode": "54464"
+  },
+  {
+    "id": "lt-ramygalos-aibe-dpd-pastomatas-333",
+    "name": "Ramygalos Aibė DPD paštomatas 333",
+    "street": "BAŽNYČIOS G. 2",
+    "city": "Ramygala",
+    "postalCode": "38261"
+  },
+  {
+    "id": "lt-maironio-maxima-pastomatas-293",
+    "name": "Maironio Maxima paštomatas 293",
+    "street": "MAIRONIO G. 64",
+    "city": "Raseiniai",
+    "postalCode": "60120"
+  },
+  {
+    "id": "lt-vilniaus-g-maxima-pastomatas-050",
+    "name": "Vilniaus g. MAXIMA paštomatas 050",
+    "street": "VILNIAUS G. 93",
+    "city": "Raseiniai",
+    "postalCode": "60170"
+  },
+  {
+    "id": "lt-vilniaus-g-naftrus-pastom-391",
+    "name": "Vilniaus g. Naftrus paštom 391",
+    "street": "VILNIAUS G. 3B",
+    "city": "Raseiniai",
+    "postalCode": "60187"
+  },
+  {
+    "id": "lt-naujalis-iki-dpd-pastomatas-106",
+    "name": "Naujalis IKI DPD paštomatas 106",
+    "street": "J. NAUJALIO G. 20B",
+    "city": "Raudondvaris",
+    "postalCode": "54138"
+  },
+  {
+    "id": "lt-berzu-maxima-dpd-pastomatas-245",
+    "name": "Beržų Maxima DPD paštomatas 245",
+    "street": "BERŽŲ G. 92",
+    "city": "Riešė",
+    "postalCode": "14266"
+  },
+  {
+    "id": "lt-rietavo-maxima-dpd-pastomatas-183",
+    "name": "Rietavo Maxima DPD paštomatas 183",
+    "street": "PLUNGĖS G. 2",
+    "city": "Rietavas",
+    "postalCode": "90313"
+  },
+  {
+    "id": "lt-geliu-maxima-dpd-pastomatas-412",
+    "name": "Gėlių Maxima DPD paštomatas 412",
+    "street": "GĖLIŲ G. 2B",
+    "city": "Ringaudai",
+    "postalCode": "53332"
+  },
+  {
+    "id": "lt-margirio-iki-dpd-pastomatas-399",
+    "name": "Margirio IKI DPD paštomatas 399",
+    "street": "MARGIRIO G. 2A",
+    "city": "Ringaudai",
+    "postalCode": "53335"
+  },
+  {
+    "id": "lt-respublika-maxima-pastomatas-041",
+    "name": "Respublika Maxima paštomatas 041",
+    "street": "RESPUBLIKOS G. 111B",
+    "city": "Rokiškis",
+    "postalCode": "42135"
+  },
+  {
+    "id": "lt-rokiskio-norfa-dpd-pastomatas-251",
+    "name": "Rokiškio Norfa DPD paštomatas 251",
+    "street": "PANEVĖŽIO G. 1",
+    "city": "Rokiškis",
+    "postalCode": "42150"
+  },
+  {
+    "id": "lt-rudaminos-aibe-dpd-pastomatas-322",
+    "name": "Rudaminos Aibė DPD paštomatas 322",
+    "street": "GAMYKLOS G. 2",
+    "city": "Rudamina",
+    "postalCode": "13246"
+  },
+  {
+    "id": "lt-rudaminos-iki-dpd-pastomatas-147",
+    "name": "Rudaminos IKI DPD paštomatas 147",
+    "street": "GAMYKLOS G. 26",
+    "city": "Rudamina",
+    "postalCode": "13249"
+  },
+  {
+    "id": "lt-rudiskiu-norfa-dpd-pastomatas-246",
+    "name": "Rūdiškių Norfa DPD paštomatas 246",
+    "street": "TRAKŲ G. 10A",
+    "city": "Rūdiškės",
+    "postalCode": "21172"
+  },
+  {
+    "id": "lt-ruklos-norfa-dpd-pastomatas-252",
+    "name": "Ruklos Norfa DPD paštomatas 252",
+    "street": "KARALIAUS MINDAUGO G. 10",
+    "city": "Rukla",
+    "postalCode": "55286"
+  },
+  {
+    "id": "lt-rumsiskiu-maxima-pastomatas-262",
+    "name": "Rumšiškių Maxima paštomatas 262",
+    "street": "L. LEKAVIČIAUS G. 32",
+    "city": "Rumšiškės",
+    "postalCode": "56337"
+  },
+  {
+    "id": "lt-kudirkos-norfa-dpd-pastomatas-207",
+    "name": "Kudirkos Norfa DPD paštomatas 207",
+    "street": "V. KUDIRKOS G. 91",
+    "city": "Šakiai",
+    "postalCode": "71121"
+  },
+  {
+    "id": "lt-sauliu-g-maxima-pastomatas-056",
+    "name": "Šaulių g. Maxima paštomatas 056",
+    "street": "ŠAULIŲ G. 11",
+    "city": "Šakiai",
+    "postalCode": "71119"
+  },
+  {
+    "id": "lt-salantu-gruste-dpd-pastomatas-339",
+    "name": "Salantų Grūstė DPD paštomatas 339",
+    "street": "M. VALANČIAUS G. 2",
+    "city": "Salantai",
+    "postalCode": "97322"
+  },
+  {
+    "id": "lt-autobusu-stotis-dpd-pastom-369",
+    "name": "Autobusų stotis DPD paštom 369",
+    "street": "VILNIAUS G. 56",
+    "city": "Šalčininkai",
+    "postalCode": "17116"
+  },
+  {
+    "id": "lt-salcininku-norfa-pastomatas-211",
+    "name": "Šalčininkų Norfa paštomatas 211",
+    "street": "VILNIAUS G. 2B",
+    "city": "Šalčininkai",
+    "postalCode": "17101"
+  },
+  {
+    "id": "lt-sedos-dpd-pastomatas-237",
+    "name": "Sedos DPD paštomatas 237",
+    "street": "A. BARANAUSKO A. 1",
+    "city": "Seda",
+    "postalCode": "89380"
+  },
+  {
+    "id": "lt-indritus-dpd-pastomatas-193",
+    "name": "Indritus DPD paštomatas 193",
+    "street": "LAISVĖS A. 21",
+    "city": "Šeduva",
+    "postalCode": "82224"
+  },
+  {
+    "id": "lt-aido-g-norfa-dpd-pastomatas-139",
+    "name": "Aido g. Norfa DPD paštomatas 139",
+    "street": "TILŽĖS G. 13A",
+    "city": "Šiauliai",
+    "postalCode": "78242"
+  },
+  {
+    "id": "lt-architektu-g-norfa-pastom-140",
+    "name": "Architektų g. Norfa paštom 140",
+    "street": "VILTIES G. 1. DAINŲ K.. ŠIAULIŲ R.",
+    "city": "Šiauliai",
+    "postalCode": "78279"
+  },
+  {
+    "id": "lt-basanaviciaus-kubas-pastom-350",
+    "name": "Basanavičiaus Kubas paštom 350",
+    "street": "J. BASANAVIČIAUS G. 112",
+    "city": "Šiauliai",
+    "postalCode": "76176"
+  },
+  {
+    "id": "lt-birutes-iki-dpd-pastomatas-266",
+    "name": "Birutės IKI DPD paštomatas 266",
+    "street": "BIRUTĖS G. 49",
+    "city": "Šiauliai",
+    "postalCode": "76216"
+  },
+  {
+    "id": "lt-bruklinas-dpd-pastomatas-105",
+    "name": "Bruklinas DPD paštomatas 105",
+    "street": "PRAMONĖS G. 6",
+    "city": "Šiauliai",
+    "postalCode": "78148"
+  },
+  {
+    "id": "lt-draugystes-kubas-dpd-pastomatas-414",
+    "name": "Draugystės Kubas DPD paštomatas 414",
+    "street": "DRAUGYSTĖS PR. 2",
+    "city": "Šiauliai",
+    "postalCode": "77145"
+  },
+  {
+    "id": "lt-geguziu-pc-arena-pastomatas-015",
+    "name": "Gegužių PC Arena paštomatas 015",
+    "street": "GEGUŽIŲ G. 30",
+    "city": "Šiauliai",
+    "postalCode": "78348"
+  },
+  {
+    "id": "lt-gumbines-norfa-dpd-pastomatas-163",
+    "name": "Gumbinės Norfa DPD paštomatas 163",
+    "street": "GUMBINĖS G. 145A",
+    "city": "Šiauliai",
+    "postalCode": "76326"
+  },
+  {
+    "id": "lt-pc-akropolis-dpd-pastomatas-416",
+    "name": "PC Akropolis DPD paštomatas 416",
+    "street": "AIDO G. 8",
+    "city": "Šiauliai",
+    "postalCode": "78322"
+  },
+  {
+    "id": "lt-pc-saules-miestas-pastomatas-028",
+    "name": "PC Saulės miestas paštomatas 028",
+    "street": "TILŽĖS G. 109",
+    "city": "Šiauliai",
+    "postalCode": "77159"
+  },
+  {
+    "id": "lt-pc-tilze-dpd-pastomatas-076",
+    "name": "PC Tilžė DPD paštomatas 076",
+    "street": "TILŽĖS G. 225",
+    "city": "Šiauliai",
+    "postalCode": "76200"
+  },
+  {
+    "id": "lt-piktmiskio-rimi-pastomatas-382",
+    "name": "Piktmiškio Rimi paštomatas 382",
+    "street": "PIKTMIŠKIO G. 75",
+    "city": "Šiauliai",
+    "postalCode": "77110"
+  },
+  {
+    "id": "lt-pramones-lidl-dpd-pastomatas-295",
+    "name": "Pramonės Lidl DPD paštomatas 295",
+    "street": "PRAMONĖS G. 1A",
+    "city": "Šiauliai",
+    "postalCode": "78137"
+  },
+  {
+    "id": "lt-statybininku-rimi-pastomatas-386",
+    "name": "Statybininkų Rimi paštomatas 386",
+    "street": "STATYBININKŲ G. 23E",
+    "city": "Šiauliai",
+    "postalCode": "76373"
+  },
+  {
+    "id": "lt-tilzes-norfa-dpd-pastomatas-403",
+    "name": "Tilžės Norfa DPD paštomatas 403",
+    "street": "TILŽĖS G. 59",
+    "city": "Šiauliai",
+    "postalCode": "78186"
+  },
+  {
+    "id": "lt-valanciaus-norfa-pastomatas-154",
+    "name": "Valančiaus Norfa paštomatas 154",
+    "street": "M. VALANČIAUS G. 18",
+    "city": "Šiauliai",
+    "postalCode": "76301"
+  },
+  {
+    "id": "lt-vilniaus-g-maxima-pastomatas-229",
+    "name": "Vilniaus g. Maxima paštomatas 229",
+    "street": "VILNIAUS G. 3",
+    "city": "Šiauliai",
+    "postalCode": "76275"
+  },
+  {
+    "id": "lt-basanaviciaus-iki-pastomatas-026",
+    "name": "Basanavičiaus IKI paštomatas 026",
+    "street": "J. BASANAVIČIAUS G. 21",
+    "city": "Šilalė",
+    "postalCode": "75124"
+  },
+  {
+    "id": "lt-dariaus-gireno-maxima-pastom-318",
+    "name": "Dariaus Girėno Maxima paštom 318",
+    "street": "DARIAUS IR GIRĖNO G. 12",
+    "city": "Šilalė",
+    "postalCode": "75135"
+  },
+  {
+    "id": "lt-dariaus-ir-gireno-iki-pastom-398",
+    "name": "Dariaus ir Girėno IKI paštom 398",
+    "street": "DARIAUS IR GIRĖNO G. 11",
+    "city": "Šilutė",
+    "postalCode": "99129"
+  },
+  {
+    "id": "lt-lietuvininku-maxima-pastomatas-247",
+    "name": "Lietuvininkų Maxima paštomatas 247",
+    "street": "LIETUVININKŲ G. 58",
+    "city": "Šilutė",
+    "postalCode": "99175"
+  },
+  {
+    "id": "lt-misko-maxima-dpd-pastomatas-049",
+    "name": "Miško MAXIMA DPD paštomatas 049",
+    "street": "MIŠKO G.7",
+    "city": "Šilutė",
+    "postalCode": "99148"
+  },
+  {
+    "id": "lt-tilzes-lidl-dpd-pastomatas-274",
+    "name": "Tilžės Lidl DPD paštomatas 274",
+    "street": "TILŽĖS G. 22A",
+    "city": "Šilutė",
+    "postalCode": "99169"
+  },
+  {
+    "id": "lt-sirvintu-maxima-dpd-pastomatas-217",
+    "name": "Širvintų Maxima DPD paštomatas 217",
+    "street": "I. ŠEINIAUS G. 19",
+    "city": "Širvintos",
+    "postalCode": "19105"
+  },
+  {
+    "id": "lt-zibalu-norfa-dpd-pastomatas-353",
+    "name": "Zibalų Norfa DPD paštomatas 353",
+    "street": "ZIBALŲ G. 11",
+    "city": "Širvintos",
+    "postalCode": "19110"
+  },
+  {
+    "id": "lt-skaidiskiu-maxima-pastomatas-264",
+    "name": "Skaidiškių Maxima paštomatas 264",
+    "street": "RUDAMINOS G. 29",
+    "city": "Skaidiškės",
+    "postalCode": "13269"
+  },
+  {
+    "id": "lt-dariaus-ir-gireno-norfa-pastom-375",
+    "name": "Dariaus ir Girėno Norfa paštom 375",
+    "street": "DARIAUS IR GIRĖNO G. 46",
+    "city": "Skuodas",
+    "postalCode": "98120"
+  },
+  {
+    "id": "lt-mosedzio-maxima-dpd-pastomatas-074",
+    "name": "Mosėdžio Maxima DPD paštomatas 074",
+    "street": "MOSĖDŽIO G. 2",
+    "city": "Skuodas",
+    "postalCode": "98123"
+  },
+  {
+    "id": "lt-klipsciu-rimi-dpd-pastomatas-109",
+    "name": "Klipščių Rimi DPD paštomatas 109",
+    "street": "ŽALIAKELIO G. 1",
+    "city": "Slengiai",
+    "postalCode": "92338"
+  },
+  {
+    "id": "lt-slengiu-rimi-dpd-pastomatas-108",
+    "name": "Slengių Rimi DPD paštomatas 108",
+    "street": "DANGAUS G. 34",
+    "city": "Slengiai",
+    "postalCode": "92343"
+  },
+  {
+    "id": "lt-zemutine-norfa-dpd-pastomatas-159",
+    "name": "Žemutinė Norfa DPD paštomatas 159",
+    "street": "ŽEMUTINĖ G. 26",
+    "city": "Švenčionėliai",
+    "postalCode": "18209"
+  },
+  {
+    "id": "lt-vilniaus-g-maxima-pastomatas-057",
+    "name": "Vilniaus g. Maxima paštomatas 057",
+    "street": "VILNIAUS G. 37",
+    "city": "Švenčionys",
+    "postalCode": "18123"
+  },
+  {
+    "id": "lt-dariaus-gireno-maxima-pastom-317",
+    "name": "Dariaus Girėno Maxima paštom 317",
+    "street": "DARIAUS IR GIRĖNO G. 63",
+    "city": "Tauragė",
+    "postalCode": "72201"
+  },
+  {
+    "id": "lt-gedimino-norfa-dpd-pastomatas-425",
+    "name": "Gedimino Norfa DPD paštomatas 425",
+    "street": "GEDIMINO G. 28",
+    "city": "Tauragė",
+    "postalCode": "72265"
+  },
+  {
+    "id": "lt-prezidento-maxima-pastomatas-055",
+    "name": "Prezidento MAXIMA paštomatas 055",
+    "street": "PREZIDENTO G. 72",
+    "city": "Tauragė",
+    "postalCode": "72238"
+  },
+  {
+    "id": "lt-silales-g-norfa-pastomatas-142",
+    "name": "Šilalės g. Norfa paštomatas 142",
+    "street": "ŠILALĖS G. 87C",
+    "city": "Tauragė",
+    "postalCode": "72186"
+  },
+  {
+    "id": "lt-slaito-maxima-dpd-pastomatas-240",
+    "name": "Šlaito Maxima DPD paštomatas 240",
+    "street": "ŠLAITO G. 1",
+    "city": "Tauragė",
+    "postalCode": "72112"
+  },
+  {
+    "id": "lt-gedimino-norfa-dpd-pastomatas-233",
+    "name": "Gedimino Norfa DPD paštomatas 233",
+    "street": "GEDIMINO G. 8",
+    "city": "Telšiai",
+    "postalCode": "87134"
+  },
+  {
+    "id": "lt-mascio-iki-dpd-pastomatas-048",
+    "name": "Masčio IKI DPD paštomatas 048",
+    "street": "MASČIO G. 1",
+    "city": "Telšiai",
+    "postalCode": "87139"
+  },
+  {
+    "id": "lt-plunges-g-rimi-dpd-pastomatas-149",
+    "name": "Plungės g. Rimi DPD paštomatas 149",
+    "street": "PLUNGĖS G. 4",
+    "city": "Telšiai",
+    "postalCode": "87317"
+  },
+  {
+    "id": "lt-telsiu-zilevana-pastomatas-385",
+    "name": "Telšių Žilevana paštomatas 385",
+    "street": "KEPYKLOS G. 2",
+    "city": "Telšiai",
+    "postalCode": "87105"
+  },
+  {
+    "id": "lt-vytauto-iki-dpd-pastomatas-311",
+    "name": "Vytauto IKI DPD paštomatas 311",
+    "street": "VYTAUTO G. 60",
+    "city": "Trakai",
+    "postalCode": "21113"
+  },
+  {
+    "id": "lt-vytauto-rimi-dpd-pastomatas-310",
+    "name": "Vytauto Rimi DPD paštomatas 310",
+    "street": "VYTAUTO G. 90",
+    "city": "Trakai",
+    "postalCode": "21106"
+  },
+  {
+    "id": "lt-truseliu-dpd-pastomatas-362",
+    "name": "Trušelių DPD paštomatas 362",
+    "street": "KARALIŠKIŲ G. 1",
+    "city": "Trušeliai",
+    "postalCode": "92437"
+  },
+  {
+    "id": "lt-tytuvenu-aibe-dpd-pastomatas-227",
+    "name": "Tytuvėnų Aibė DPD paštomatas 227",
+    "street": "J. BASANAVIČIAUS G. 1",
+    "city": "Tytuvėnai",
+    "postalCode": "86488"
+  },
+  {
+    "id": "lt-pc-eifelis-dpd-pastomatas-029",
+    "name": "PC Eifelis DPD paštomatas 029",
+    "street": "VYTAUTO G. 113",
+    "city": "Ukmergė",
+    "postalCode": "20184"
+  },
+  {
+    "id": "lt-pc-papartis-dpd-pastomatas-365",
+    "name": "PC Papartis DPD paštomatas 365",
+    "street": "VASARIO 16-OSIOS G. 30",
+    "city": "Ukmergė",
+    "postalCode": "20130"
+  },
+  {
+    "id": "lt-vilniaus-iki-dpd-pastomatas-243",
+    "name": "Vilniaus IKI DPD paštomatas 243",
+    "street": "VILNIAUS G. 62",
+    "city": "Ukmergė",
+    "postalCode": "20159"
+  },
+  {
+    "id": "lt-ziedo-maxima-dpd-pastomatas-124",
+    "name": "Žiedo Maxima DPD paštomatas 124",
+    "street": "ŽIEDO G. 1",
+    "city": "Ukmergė",
+    "postalCode": "20118"
+  },
+  {
+    "id": "lt-ausros-maxima-dpd-pastomatas-115",
+    "name": "Aušros Maxima DPD paštomatas 115",
+    "street": "AUŠROS G. 78",
+    "city": "Utena",
+    "postalCode": "28150"
+  },
+  {
+    "id": "lt-basanaviciaus-maxima-pastomat-177",
+    "name": "Basanavičiaus Maxima paštomat 177",
+    "street": "J.BASANAVIČIAUS G. 108B",
+    "city": "Utena",
+    "postalCode": "28214"
+  },
+  {
+    "id": "lt-kupiskio-g-norfa-pastomatas-323",
+    "name": "Kupiškio g. Norfa paštomatas 323",
+    "street": "KUPIŠKIO G. 54",
+    "city": "Utena",
+    "postalCode": "28175"
+  }
+]

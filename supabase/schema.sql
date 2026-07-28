@@ -585,7 +585,9 @@ create table if not exists public.orders (
   customer_name     text not null,
   customer_email    text not null,
   customer_phone    text,
+  delivery_method   text not null default 'address', -- pickup | address | locker
   shipping_address  text,
+  locker_id         text, -- DPD locker id, only set when delivery_method = 'locker'
   notes             text,
   status            text not null default 'new', -- new | confirmed | fulfilled | cancelled
   created_at        timestamptz not null default now()

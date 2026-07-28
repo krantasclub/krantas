@@ -25,9 +25,18 @@ export async function POST(req: NextRequest) {
       customerName,
       customerEmail,
       customerPhone,
+      deliveryMethod,
       shippingAddress,
+      lockerId,
+      lockerLabel,
       notes,
     } = body ?? {};
+
+    const DELIVERY_METHODS = ["pickup", "address", "locker"];
+    const method = DELIVERY_METHODS.includes(deliveryMethod) ? deliveryMethod : "address";
+    if (method === "locker" && (!lockerId || !lockerLabel)) {
+      return NextResponse.json({ error: "Please choose a DPD parcel locker." }, { status: 400 });
+    }
 
     if (!productId || typeof productId !== "string") {
       return NextResponse.json({ error: "Missing product." }, { status: 400 });
@@ -77,7 +86,9 @@ export async function POST(req: NextRequest) {
         customer_name: customerName.trim(),
         customer_email: customerEmail.trim(),
         customer_phone: customerPhone?.trim() || null,
-        shipping_address: shippingAddress?.trim() || null,
+        delivery_method: method,
+        shipping_address: method === "locker" ? lockerLabel : shippingAddress?.trim() || null,
+        locker_id: method === "locker" ? lockerId : null,
         notes: notes?.trim() || null,
       })
       .select()
@@ -107,6 +118,7 @@ export async function POST(req: NextRequest) {
         customerName: order.customer_name,
         customerEmail: order.customer_email,
         customerPhone: order.customer_phone,
+        deliveryMethod: order.delivery_method,
         shippingAddress: order.shipping_address,
         notes: order.notes,
         createdAt: new Date(order.created_at),
