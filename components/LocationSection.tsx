@@ -17,7 +17,7 @@ export default function LocationSection() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-10 place-items-center">
           {PHOTOS.map((p, i) => (
-            <Reveal key={p.id} delay={i * 80}>
+            <Reveal key={p.id} delay={i * 80} className="w-full max-w-[260px]">
               <div
                 className="relative w-full aspect-[3/4] max-w-[260px] overflow-hidden border border-[var(--line)] shadow-[0_14px_34px_rgba(0,0,0,0.5)]"
                 style={{ transform: `rotate(${p.rotate}deg)` }}
