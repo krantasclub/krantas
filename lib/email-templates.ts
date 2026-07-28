@@ -170,6 +170,7 @@ export type BookingEmailData = {
   phone?: string | null;
   eventDate?: string | null;
   guestCount?: number | null;
+  artistName?: string | null;
   message: string;
   createdAt: Date;
 };
@@ -190,6 +191,7 @@ export function adminBookingEmail(b: BookingEmailData) {
       ${row("Phone", b.phone)}
       ${row("Event date", b.eventDate)}
       ${row("Guests", b.guestCount ? String(b.guestCount) : null)}
+      ${row("Artist", b.artistName)}
       ${row("Received", b.createdAt.toLocaleString("lt-LT", { dateStyle: "medium", timeStyle: "short" }))}
     </table>
     <p style="margin:20px 0 0;font:14px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:${COLORS.ink};opacity:0.9;white-space:pre-wrap;">${b.message}</p>

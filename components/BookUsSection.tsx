@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import type { Artist } from "@/lib/content";
 
 const INPUT_CLS =
   "w-full bg-transparent border-0 border-b border-[var(--line-strong)] text-[var(--ink)] py-2 text-sm outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[var(--ink-dim)]";
@@ -14,13 +15,14 @@ const REQUEST_TYPES = [
   { id: "other", label: "Something else" },
 ] as const;
 
-export default function BookUsSection() {
+export default function BookUsSection({ artists = [] }: { artists?: Artist[] }) {
   const [requestType, setRequestType] = useState<(typeof REQUEST_TYPES)[number]["id"]>("dj_booking");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [guestCount, setGuestCount] = useState("");
+  const [artistName, setArtistName] = useState("");
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -41,6 +43,7 @@ export default function BookUsSection() {
           phone,
           eventDate: eventDate || null,
           guestCount: guestCount ? Number(guestCount) : null,
+          artistName: requestType === "dj_booking" ? artistName || null : null,
           message,
         }),
       });
@@ -95,6 +98,24 @@ export default function BookUsSection() {
                     ))}
                   </div>
                 </div>
+
+                {requestType === "dj_booking" && artists.length > 0 && (
+                  <div className="mb-5">
+                    <label className={LABEL_CLS}>Which artist (optional)</label>
+                    <select
+                      className={`${INPUT_CLS} bg-[var(--bg)]`}
+                      value={artistName}
+                      onChange={(e) => setArtistName(e.target.value)}
+                    >
+                      <option value="">Not sure / new artist</option>
+                      {artists.map((a) => (
+                        <option key={a.id} value={a.name}>
+                          {a.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
 
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>

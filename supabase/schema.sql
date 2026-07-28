@@ -817,6 +817,7 @@ create table if not exists public.booking_requests (
   phone          text,
   event_date     date,
   guest_count    integer,
+  artist_name    text, -- selected from the current artists roster, dj_booking only
   message        text not null,
   status         text not null default 'new', -- new | contacted | confirmed | declined
   created_at     timestamptz not null default now()

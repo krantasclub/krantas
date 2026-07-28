@@ -22,6 +22,7 @@ type BookingRow = {
   phone: string | null;
   event_date: string | null;
   guest_count: number | null;
+  artist_name: string | null;
   message: string;
   status: string;
   created_at: string;
@@ -272,6 +273,7 @@ function BookingList({ rows, onStatus, onDelete }: { rows: BookingRow[]; onStatu
             {r.phone && <div><span className="text-[#9aa19d]">Phone: </span>{r.phone}</div>}
             {r.event_date && <div><span className="text-[#9aa19d]">Date: </span>{r.event_date}</div>}
             {r.guest_count != null && <div><span className="text-[#9aa19d]">Guests: </span>{r.guest_count}</div>}
+            {r.artist_name && <div><span className="text-[#9aa19d]">Artist: </span>{r.artist_name}</div>}
           </div>
           <p className="text-xs text-[#ece7dd]/90 leading-relaxed mb-3 pt-2 border-t border-[rgba(236,231,221,0.1)] whitespace-pre-wrap">{r.message}</p>
           <div className="flex justify-end pt-2 border-t border-[rgba(236,231,221,0.1)]">

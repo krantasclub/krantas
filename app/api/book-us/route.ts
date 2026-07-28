@@ -16,7 +16,7 @@ const REQUEST_TYPES = ["dj_booking", "private_event", "other"];
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { requestType, name, email, phone, eventDate, guestCount, message } = body ?? {};
+    const { requestType, name, email, phone, eventDate, guestCount, artistName, message } = body ?? {};
 
     const type = REQUEST_TYPES.includes(requestType) ? requestType : "other";
 
@@ -45,6 +45,7 @@ export async function POST(req: NextRequest) {
         phone: phone?.trim() || null,
         event_date: eventDate || null,
         guest_count: guests,
+        artist_name: typeof artistName === "string" && artistName.trim() ? artistName.trim() : null,
         message: message.trim(),
       })
       .select()
@@ -70,6 +71,7 @@ export async function POST(req: NextRequest) {
         phone: row.phone,
         eventDate: row.event_date,
         guestCount: row.guest_count,
+        artistName: row.artist_name,
         message: row.message,
         createdAt: new Date(row.created_at),
       };
