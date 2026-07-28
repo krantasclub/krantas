@@ -1,22 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import WaveDivider from "./WaveDivider";
 import TicketButtons from "./TicketButtons";
+import LanguageSwitch from "./LanguageSwitch";
+import { useLanguage } from "./LanguageProvider";
 
+// Hrefs are fixed routes — only the visible labels are translated, via
+// the `key` below (see lib/i18n/translations.ts under footer.*).
 const EXPLORE_LINKS = [
-  { label: "Releases", href: "/releases" },
-  { label: "Artists", href: "/artists" },
-  { label: "Events", href: "/events" },
-  { label: "Radio", href: "/radio" },
-  { label: "Store", href: "/store" },
-];
+  { key: "releases", href: "/releases" },
+  { key: "artists", href: "/artists" },
+  { key: "events", href: "/events" },
+  { key: "radio", href: "/radio" },
+  { key: "store", href: "/store" },
+] as const;
 
 const CLUB_LINKS = [
-  { label: "About Krantas", href: "/about" },
-  { label: "Lost & found", href: "/lost-and-found" },
-  { label: "Contact", href: "/contact" },
-  { label: "Book us", href: "/book-us" },
-];
+  { key: "aboutKrantas", href: "/about" },
+  { key: "lostAndFound", href: "/lost-and-found" },
+  { key: "contact", href: "/contact" },
+  { key: "bookUs", href: "/book-us" },
+] as const;
 
 // Shared hover treatment for every footer link: text shifts to the
 // accent orange and an underline in the same color draws in beneath
@@ -27,6 +33,17 @@ const linkHover =
   "hover:text-[var(--accent)] hover:underline decoration-[var(--accent)] underline-offset-4 transition-colors";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  // nav.* labels are reused here so "Releases"/"Artists"/etc. only need
+  // to be translated once.
+  const navLabel: Record<string, string> = {
+    releases: t("nav.releases"),
+    artists: t("nav.artists"),
+    events: t("nav.events"),
+    radio: t("nav.radio"),
+    store: t("nav.store"),
+  };
+
   return (
     <footer className="relative bg-[var(--bg)]">
       <WaveDivider fill="var(--bg-raised)" />
@@ -49,21 +66,21 @@ export default function Footer() {
                 </p>
               </div>
               <p className="mt-3 max-w-xs text-sm text-[var(--ink)]/70">
-                Naktinis klubas Klaipėdoje. Underground music by the shore —
-                techno, breaks and bass since the tide turned.
+                {t("footer.tagline")}
               </p>
-              <div className="mt-5">
+              <div className="mt-5 flex items-center gap-4">
                 <TicketButtons variant="block" />
+                <LanguageSwitch />
               </div>
             </div>
 
             <div>
-              <p className="eyebrow mb-4">Explore</p>
+              <p className="eyebrow mb-4">{t("footer.explore")}</p>
               <ul className="space-y-2.5">
                 {EXPLORE_LINKS.map((l) => (
                   <li key={l.href}>
                     <Link href={l.href} className={`text-sm ${linkHover}`}>
-                      {l.label}
+                      {navLabel[l.key]}
                     </Link>
                   </li>
                 ))}
@@ -71,26 +88,20 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="eyebrow mb-4">Club</p>
+              <p className="eyebrow mb-4">{t("footer.club")}</p>
               <ul className="space-y-2.5">
                 {CLUB_LINKS.map((l) => (
-                  <li key={l.label}>
-                    {l.href.startsWith("/") ? (
-                      <Link href={l.href} className={`text-sm ${linkHover}`}>
-                        {l.label}
-                      </Link>
-                    ) : (
-                      <a href={l.href} className={`text-sm ${linkHover}`}>
-                        {l.label}
-                      </a>
-                    )}
+                  <li key={l.href}>
+                    <Link href={l.href} className={`text-sm ${linkHover}`}>
+                      {t(`footer.${l.key}`)}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <p className="eyebrow mb-4">Find us</p>
+              <p className="eyebrow mb-4">{t("footer.findUs")}</p>
               <address className="not-italic text-sm space-y-1 text-[var(--ink)]/85">
                 <p>Naujoji Uosto g. 3</p>
                 <p>92120 Klaipėda, Lithuania</p>
@@ -110,7 +121,7 @@ export default function Footer() {
 
           <div className="mt-12 sm:mt-16 pt-6 border-t border-[var(--line)] flex flex-wrap items-center justify-between gap-4">
             <p className="font-mono text-xs text-[var(--ink)]/60">
-              © {new Date().getFullYear()} Krantas. All rights reserved. · Powered by{" "}
+              © {new Date().getFullYear()} Krantas. {t("footer.allRightsReserved")} · {t("footer.poweredBy")}{" "}
               <a
                 href="https://sweetnet.lt"
                 target="_blank"

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Anton, Inter, IBM_Plex_Mono } from "next/font/google";
 import SiteChrome from "@/components/SiteChrome";
+import { LanguageProvider } from "@/components/LanguageProvider";
+import { LOCALE_COOKIE, defaultLocale, isLocale } from "@/lib/i18n/config";
 import { getRadioEpisodes, getReels, getHomepageContent } from "@/lib/data";
 import "./globals.css";
 
@@ -193,11 +196,14 @@ export default async function RootLayout({
   // client-side, which meant the fallback placeholder track flashed in
   // the header on every single page load. Fetching it here means it's
   // already resolved by the time the header renders.
-  const [episodes, reels, homepageContent] = await Promise.all([
+  const [episodes, reels, homepageContent, cookieStore] = await Promise.all([
     getRadioEpisodes(),
     getReels(),
     getHomepageContent(),
+    cookies(),
   ]);
+  const cookieLocale = cookieStore.get(LOCALE_COOKIE)?.value;
+  const initialLocale = isLocale(cookieLocale) ? cookieLocale : defaultLocale;
   return (
     <html lang="lt">
       <head>
@@ -218,7 +224,9 @@ export default async function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </head>
       <body className={`${anton.variable} ${inter.variable} ${plexMono.variable}`}>
-        <SiteChrome initialEpisodes={episodes} initialReels={reels}>{children}</SiteChrome>
+        <LanguageProvider initialLocale={initialLocale}>
+          <SiteChrome initialEpisodes={episodes} initialReels={reels}>{children}</SiteChrome>
+        </LanguageProvider>
       </body>
     </html>
   );

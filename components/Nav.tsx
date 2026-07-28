@@ -6,26 +6,31 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useScrollY } from "@/hooks/useScrollY";
 import type { RadioEpisode } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
+import LanguageSwitch from "./LanguageSwitch";
 import TicketButtons from "./TicketButtons";
 import SetsPlayer from "./SetsPlayer";
 import GoogleReviewBadge from "./GoogleReviewBadge";
 
-const LINKS = [
-  { label: "Releases", href: "/releases" },
-  { label: "Artists", href: "/artists" },
-  { label: "Events", href: "/events" },
-  { label: "Radio", href: "/radio" },
-  { label: "Store", href: "/store" },
-];
-
 export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisode[] }) {
   const scrollY = useScrollY();
   const pathname = usePathname();
+  const { t } = useLanguage();
   const isHome = pathname === "/";
   // On inner pages there's no hero to sit over, so the header is
   // solid right away, same as visionrecordings.nl.
   const solid = !isHome || scrollY > 64;
   const [open, setOpen] = useState(false);
+
+  // Hrefs are fixed routes (not translated — the URLs don't change per
+  // language, only the visible label does).
+  const links = [
+    { key: "releases", href: "/releases" },
+    { key: "artists", href: "/artists" },
+    { key: "events", href: "/events" },
+    { key: "radio", href: "/radio" },
+    { key: "store", href: "/store" },
+  ] as const;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -58,7 +63,7 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 font-mono text-xs tracking-[0.18em] uppercase">
-          {LINKS.map((l) => {
+          {links.map((l) => {
             const active = pathname === l.href;
             return (
               <Link
@@ -71,13 +76,14 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
                     : "text-[var(--ink)]/85 hover:text-[var(--accent)] after:w-0 hover:after:w-full"
                 }`}
               >
-                {l.label}
+                {t(`nav.${l.key}`)}
               </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-4 sm:gap-5">
+          <LanguageSwitch className="hidden md:inline-flex" />
           <SetsPlayer initialEpisodes={initialEpisodes} />
           <TicketButtons variant="nav" />
         </div>
@@ -85,7 +91,7 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
         <button
           onClick={() => setOpen((o) => !o)}
           className="md:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-[6px]"
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
           aria-expanded={open}
         >
           <span
@@ -108,7 +114,7 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
         }`}
       >
         <nav className="flex flex-col px-5 py-4 gap-1 font-mono text-sm tracking-[0.14em] uppercase">
-          {LINKS.map((l) => {
+          {links.map((l) => {
             const active = pathname === l.href;
             return (
               <Link
@@ -122,10 +128,11 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
                     : "text-[var(--ink)]/85 border-[var(--line)] hover:text-[var(--accent)] hover:border-[var(--accent)]"
                 }`}
               >
-                {l.label}
+                {t(`nav.${l.key}`)}
               </Link>
             );
           })}
+          <LanguageSwitch className="mt-3 self-start" />
           <TicketButtons variant="nav-mobile" onNavigate={() => setOpen(false)} />
           <GoogleReviewBadge className="mt-3 py-1 justify-center" label="review" labelMode="always" />
         </nav>

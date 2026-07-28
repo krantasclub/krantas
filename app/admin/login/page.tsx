@@ -3,11 +3,14 @@ import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import LanguageSwitch from "@/components/LanguageSwitch";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function AdminLoginPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+  const { t } = useLanguage();
 
   async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -18,7 +21,7 @@ export default function AdminLoginPage() {
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
     const { error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
-      setError("Wrong email or password.");
+      setError(t("admin.wrongCredentials"));
       setLoading(false);
     } else {
       router.push("/admin");
@@ -31,12 +34,15 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-[360px]">
         <div className="text-center mb-10">
           <div className="font-display text-5xl text-[#ece7dd] leading-none mb-1.5">KRANTAS</div>
-          <div className="text-[10px] tracking-[0.38em] uppercase text-[#9aa19d]">Control Panel</div>
+          <div className="text-[10px] tracking-[0.38em] uppercase text-[#9aa19d] mb-3">{t("admin.controlPanel")}</div>
+          <div className="flex justify-center">
+            <LanguageSwitch />
+          </div>
         </div>
         <div className="bg-[#12181a] border border-[rgba(236,231,221,0.14)] px-9 py-10">
           <form onSubmit={handleLogin} className="flex flex-col gap-6">
             <div>
-              <label className="block text-[10px] tracking-[0.32em] uppercase text-[#9aa19d] mb-1.5">Email</label>
+              <label className="block text-[10px] tracking-[0.32em] uppercase text-[#9aa19d] mb-1.5">{t("admin.email")}</label>
               <input
                 type="email"
                 name="email"
@@ -47,7 +53,7 @@ export default function AdminLoginPage() {
               />
             </div>
             <div>
-              <label className="block text-[10px] tracking-[0.32em] uppercase text-[#9aa19d] mb-1.5">Password</label>
+              <label className="block text-[10px] tracking-[0.32em] uppercase text-[#9aa19d] mb-1.5">{t("admin.password")}</label>
               <input
                 type="password"
                 name="password"
@@ -63,13 +69,13 @@ export default function AdminLoginPage() {
               disabled={loading}
               className="border border-[#ff8a1e] text-[#ff8a1e] hover:bg-[#ff8a1e] hover:text-[#12100c] transition-colors text-xs tracking-[0.18em] uppercase px-5 py-3 disabled:opacity-50"
             >
-              {loading ? "Signing in..." : "Sign in"}
+              {loading ? t("admin.signingIn") : t("admin.signIn")}
             </button>
           </form>
         </div>
         <div className="text-center mt-5">
           <Link href="/" className="text-[11px] tracking-[0.22em] uppercase text-[#9aa19d] hover:text-[#ff8a1e] transition-colors">
-            ← Back to site
+            {t("admin.backToSiteLong")}
           </Link>
         </div>
       </div>

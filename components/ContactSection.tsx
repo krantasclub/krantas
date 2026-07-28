@@ -3,12 +3,14 @@
 import { useState, type FormEvent } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 
 const INPUT_CLS =
   "w-full bg-transparent border-0 border-b border-[var(--line-strong)] text-[var(--ink)] py-2 text-sm outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[var(--ink-dim)]";
 const LABEL_CLS = "block font-mono text-[9px] uppercase tracking-[0.16em] text-[var(--ink-dim)] mb-1.5";
 
 export default function ContactSection() {
+  const { t, dict } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -29,10 +31,10 @@ export default function ContactSection() {
         body: JSON.stringify({ name, email, phone, subject, message }),
       });
       const json = await res.json();
-      if (!res.ok) throw new Error(json.error ?? "Something went wrong — try again.");
+      if (!res.ok) throw new Error(json.error ?? t("contact.genericError"));
       setDone(true);
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "Something went wrong — try again.");
+      setError(e instanceof Error ? e.message : t("contact.genericError"));
     } finally {
       setSubmitting(false);
     }
@@ -41,49 +43,49 @@ export default function ContactSection() {
   return (
     <section className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
-        <SectionHeading eyebrow="Get in touch" title="Contact" note="Questions, press, guest lists — drop us a line." />
+        <SectionHeading eyebrow={t("contact.eyebrow")} title={t("contact.title")} note={t("contact.note")} />
 
         <div className="grid gap-12 sm:gap-16 md:grid-cols-[1.1fr_0.9fr] items-start">
           <Reveal>
             {done ? (
               <div className="border border-[var(--accent)]/50 px-5 py-5 max-w-lg">
                 <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent)] mb-1.5">
-                  Message sent
+                  {t("contact.messageSentTitle")}
                 </p>
                 <p className="font-body text-sm text-[var(--ink)]/85 leading-relaxed">
-                  Thanks, {name.split(" ")[0]} — check your inbox for a confirmation. We&apos;ll get back to you soon.
+                  {dict.contact.messageSentBody(name.split(" ")[0])}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="max-w-lg">
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className={LABEL_CLS}>Name</label>
-                    <input required className={INPUT_CLS} value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" />
+                    <label className={LABEL_CLS}>{t("contact.nameLabel")}</label>
+                    <input required className={INPUT_CLS} value={name} onChange={(e) => setName(e.target.value)} placeholder={t("contact.namePlaceholder")} />
                   </div>
                   <div>
-                    <label className={LABEL_CLS}>Email</label>
-                    <input required type="email" className={INPUT_CLS} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
+                    <label className={LABEL_CLS}>{t("contact.emailLabel")}</label>
+                    <input required type="email" className={INPUT_CLS} value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("contact.emailPlaceholder")} />
                   </div>
                   <div>
-                    <label className={LABEL_CLS}>Phone (optional)</label>
-                    <input className={INPUT_CLS} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+370..." />
+                    <label className={LABEL_CLS}>{t("contact.phoneLabel")}</label>
+                    <input className={INPUT_CLS} value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t("contact.phonePlaceholder")} />
                   </div>
                   <div>
-                    <label className={LABEL_CLS}>Subject (optional)</label>
-                    <input className={INPUT_CLS} value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="What's this about?" />
+                    <label className={LABEL_CLS}>{t("contact.subjectLabel")}</label>
+                    <input className={INPUT_CLS} value={subject} onChange={(e) => setSubject(e.target.value)} placeholder={t("contact.subjectPlaceholder")} />
                   </div>
                 </div>
 
                 <div className="mb-5">
-                  <label className={LABEL_CLS}>Message</label>
+                  <label className={LABEL_CLS}>{t("contact.messageLabel")}</label>
                   <textarea
                     required
                     className={`${INPUT_CLS} resize-none`}
                     rows={5}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Tell us what's up..."
+                    placeholder={t("contact.messagePlaceholder")}
                   />
                 </div>
 
@@ -96,7 +98,7 @@ export default function ContactSection() {
                   disabled={submitting}
                   className="inline-flex items-center gap-2 border border-[var(--accent)] text-[var(--accent)] font-mono text-xs tracking-[0.18em] uppercase px-5 py-3 hover:bg-[var(--accent)] hover:text-[#12100c] transition-colors disabled:opacity-50"
                 >
-                  {submitting ? "Sending..." : "Send message →"}
+                  {submitting ? t("contact.sending") : t("contact.send")}
                 </button>
               </form>
             )}
@@ -104,7 +106,7 @@ export default function ContactSection() {
 
           <Reveal delay={120}>
             <div className="border border-[var(--line)] p-6 sm:p-8">
-              <p className="eyebrow mb-4">Find us</p>
+              <p className="eyebrow mb-4">{t("contact.findUs")}</p>
               <address className="not-italic space-y-1 text-sm text-[var(--ink)]/85">
                 <p>Naujoji Uosto g. 3</p>
                 <p>92120 Klaipėda, Lithuania</p>
@@ -120,7 +122,7 @@ export default function ContactSection() {
                 </p>
               </address>
 
-              <p className="eyebrow mt-6 mb-3">Follow</p>
+              <p className="eyebrow mt-6 mb-3">{t("contact.follow")}</p>
               <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-[0.12em] text-[var(--ink)]/70">
                 <a href="https://instagram.com/krantas_club" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--accent)] transition-colors">
                   Instagram

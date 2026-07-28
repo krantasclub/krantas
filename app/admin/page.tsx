@@ -2,6 +2,8 @@
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import LanguageSwitch from "@/components/LanguageSwitch";
+import { useLanguage } from "@/components/LanguageProvider";
 
 const sections = [
   {
@@ -32,6 +34,7 @@ const sections = [
 
 export default function AdminPage() {
   const router = useRouter();
+  const { t } = useLanguage();
   async function handleLogout() {
     await supabase.auth.signOut();
     router.push("/admin/login");
@@ -42,7 +45,10 @@ export default function AdminPage() {
       <div className="w-full max-w-[520px]">
         <div className="text-center mb-10">
           <div className="font-display text-5xl text-[#ece7dd] leading-none mb-1.5">KRANTAS</div>
-          <div className="text-[10px] tracking-[0.38em] uppercase text-[#9aa19d]">Control Panel</div>
+          <div className="text-[10px] tracking-[0.38em] uppercase text-[#9aa19d] mb-3">{t("admin.controlPanel")}</div>
+          <div className="flex justify-center">
+            <LanguageSwitch />
+          </div>
         </div>
 
         <div className="bg-[#12181a] border border-[rgba(236,231,221,0.14)]">
@@ -69,9 +75,9 @@ export default function AdminPage() {
             </div>
           ))}
           <div className="px-7 py-5 flex items-center justify-between">
-            <Link href="/" className="text-[11px] tracking-[0.2em] uppercase text-[#ff8a1e]">← Site</Link>
+            <Link href="/" className="text-[11px] tracking-[0.2em] uppercase text-[#ff8a1e]">{t("admin.backToSite")}</Link>
             <button onClick={handleLogout} className="bg-transparent border-0 cursor-pointer text-[11px] tracking-[0.2em] uppercase text-[#9aa19d] hover:text-[#e5837f] transition-colors">
-              Sign out →
+              {t("admin.signOut")}
             </button>
           </div>
         </div>
