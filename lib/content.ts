@@ -277,6 +277,12 @@ export type Sponsor = {
   id: string;
   name: string;
   src: string;
+  // Intrinsic pixel dimensions of the source file — required by
+  // next/image to reserve the right aspect ratio (prevents layout
+  // shift) even though the logo is actually rendered much smaller via
+  // CSS max-height/max-width + object-contain.
+  width: number;
+  height: number;
   // Marks the headline partner — sorted first in the logo wall.
   primary?: boolean;
   // Very wide/thin wordmark logos (Pioneer, Ableton, Traktor) need a
@@ -286,20 +292,20 @@ export type Sponsor = {
 };
 
 export const sponsors: Sponsor[] = [
-  { id: "hor", name: "HOR", src: "/sponsors/hor-mark.png", primary: true },
-  { id: "pioneer", name: "Pioneer DJ", src: "/sponsors/pioneer-mark.png", wide: true },
-  { id: "jagermeister", name: "Jägermeister", src: "/sponsors/jagermeister-mark.png" },
-  { id: "ableton", name: "Ableton", src: "/sponsors/ableton-mark.png", wide: true },
-  { id: "redbull", name: "Red Bull", src: "/sponsors/redbull-mark.png" },
-  { id: "traktor", name: "Traktor", src: "/sponsors/traktor-mark.png", wide: true },
+  { id: "hor", name: "HOR", src: "/sponsors/hor-mark.webp", width: 397, height: 115, primary: true },
+  { id: "pioneer", name: "Pioneer DJ", src: "/sponsors/pioneer-mark.webp", width: 483, height: 70, wide: true },
+  { id: "jagermeister", name: "Jägermeister", src: "/sponsors/jagermeister-mark.webp", width: 509, height: 350 },
+  { id: "ableton", name: "Ableton", src: "/sponsors/ableton-mark.webp", width: 391, height: 70, wide: true },
+  { id: "redbull", name: "Red Bull", src: "/sponsors/redbull-mark.webp", width: 553, height: 393 },
+  { id: "traktor", name: "Traktor", src: "/sponsors/traktor-mark.webp", width: 602, height: 89, wide: true },
 ];
 
 export type GalleryImage = { id: string; src: string; alt: string };
 
 export const galleryImages: GalleryImage[] = [
-  { id: "venue-1", src: "/gallery/venue-1.jpg", alt: "DJ set at Krantas" },
-  { id: "venue-2", src: "/gallery/venue-2.jpg", alt: "Bar at Krantas" },
-  { id: "venue-3", src: "/gallery/venue-3.jpg", alt: "Crowd on the dancefloor at Krantas" },
+  { id: "venue-1", src: "/gallery/venue-1.webp", alt: "DJ set at Krantas" },
+  { id: "venue-2", src: "/gallery/venue-2.webp", alt: "Bar at Krantas" },
+  { id: "venue-3", src: "/gallery/venue-3.webp", alt: "Crowd on the dancefloor at Krantas" },
 ];
 
 export type RadioEpisode = {
