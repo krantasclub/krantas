@@ -116,8 +116,10 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
                 href={l.href}
                 onClick={() => setOpen(false)}
                 aria-current={active ? "page" : undefined}
-                className={`py-3 border-b border-[var(--line)] ${
-                  active ? "text-[var(--ink)]" : "text-[var(--ink)]/85 hover:text-[var(--accent)]"
+                className={`py-3 border-b transition-colors ${
+                  active
+                    ? "text-[var(--ink)] border-[var(--accent)]"
+                    : "text-[var(--ink)]/85 border-[var(--line)] hover:text-[var(--accent)] hover:border-[var(--accent)]"
                 }`}
               >
                 {l.label}

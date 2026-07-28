@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Anton, Inter, IBM_Plex_Mono } from "next/font/google";
 import SiteChrome from "@/components/SiteChrome";
-import { getRadioEpisodes, getReels } from "@/lib/data";
+import { getRadioEpisodes, getReels, getHomepageContent } from "@/lib/data";
 import "./globals.css";
 
 const anton = Anton({
@@ -83,14 +83,26 @@ export default async function RootLayout({
   // client-side, which meant the fallback placeholder track flashed in
   // the header on every single page load. Fetching it here means it's
   // already resolved by the time the header renders.
-  const [episodes, reels] = await Promise.all([getRadioEpisodes(), getReels()]);
+  const [episodes, reels, homepageContent] = await Promise.all([
+    getRadioEpisodes(),
+    getReels(),
+    getHomepageContent(),
+  ]);
   return (
     <html lang="lt">
       <head>
         {/* Hero poster is set via CSS background-image (not <img>/next/image),
             so the browser can't discover it until CSS is parsed. It's the
-            LCP element on the homepage, so preload it explicitly. */}
-        <link rel="preload" as="image" href="/hero-poster.webp" fetchPriority="high" />
+            LCP element on the homepage, so preload it explicitly — pointing
+            at whichever poster is actually in use (admin-uploaded via
+            /admin/homepage, or the bundled default) so an admin-swapped
+            hero video doesn't regress load time. */}
+        <link
+          rel="preload"
+          as="image"
+          href={homepageContent.heroPosterUrl || "/hero-poster.webp"}
+          fetchPriority="high"
+        />
       </head>
       <body className={`${anton.variable} ${inter.variable} ${plexMono.variable}`}>
         <SiteChrome initialEpisodes={episodes} initialReels={reels}>{children}</SiteChrome>

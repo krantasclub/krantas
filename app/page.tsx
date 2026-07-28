@@ -35,7 +35,11 @@ export default async function Home() {
   ]);
   return (
     <>
-      <Hero />
+      <Hero
+        videoUrl={homepageContent.heroVideoUrl}
+        videoType={homepageContent.heroVideoType}
+        posterUrl={homepageContent.heroPosterUrl}
+      />
       <Marquee text={homepageContent.marqueeText} />
       <ArtistsSection initialRoster={artists} />
       <VideosSection initialItems={videos} />

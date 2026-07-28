@@ -128,10 +128,21 @@ function ShoreGlow() {
  * the poster frame instead of autoplaying, and falls back to
  * ShoreGlow if the file can't be loaded at all.
  */
-function VenueReel() {
+type VenueReelProps = {
+  // Admin-uploaded override from /admin/homepage (Supabase-backed). Any of
+  // these being empty/undefined falls straight back to the bundled
+  // /hero.webm + /hero.mp4 + /hero-poster.webp footage below.
+  videoUrl?: string;
+  videoType?: string;
+  posterUrl?: string;
+};
+
+function VenueReel({ videoUrl, videoType, posterUrl }: VenueReelProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [failed, setFailed] = useState(false);
   const [ready, setReady] = useState(false);
+  const poster = posterUrl || "/hero-poster.webp";
+  const hasCustomVideo = Boolean(videoUrl);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -139,6 +150,13 @@ function VenueReel() {
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
+
+    // A custom admin upload swaps the <source> children (see JSX below), so
+    // reset the "did it ever manage to show a frame" state whenever the
+    // source itself changes — otherwise a previous failure could stick
+    // around and hide a perfectly good replacement video.
+    setFailed(false);
+    setReady(false);
 
     // Explicitly (re)load so the browser freshly evaluates the <source>
     // children rather than relying on whatever it picked on first paint —
@@ -172,7 +190,10 @@ function VenueReel() {
       video.removeEventListener("playing", reveal);
       window.clearTimeout(timeout);
     };
-  }, []);
+    // Re-run the whole load/autoplay dance if the admin swaps the source
+    // (e.g. saves a new hero video from /admin/homepage without a full
+    // page reload happening to be in between).
+  }, [videoUrl, videoType]);
 
   if (failed) {
     return <ShoreGlow />;
@@ -185,9 +206,10 @@ function VenueReel() {
           (which is baked into the same element) and flashing to black. */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/hero-poster.webp)" }}
+        style={{ backgroundImage: `url(${poster})` }}
       />
       <video
+        key={videoUrl || "default"}
         ref={videoRef}
         className={`absolute inset-0 w-full h-full object-cover saturate-[1.08] hero-drift transition-opacity duration-700 ease-out ${
           ready ? "opacity-100" : "opacity-0"
@@ -199,15 +221,25 @@ function VenueReel() {
         preload="auto"
         onError={() => setFailed(true)}
       >
-        <source src="/hero.webm" type="video/webm" />
-        <source src="/hero.mp4" type="video/mp4" />
+        {hasCustomVideo ? (
+          // Admin upload: a single file, so only one <source>. Type is
+          // whatever mime the browser reported at upload time — omitted
+          // entirely (rather than guessed) if that's missing, since a
+          // wrong type attribute makes some browsers skip the source.
+          <source src={videoUrl} type={videoType || undefined} />
+        ) : (
+          <>
+            <source src="/hero.webm" type="video/webm" />
+            <source src="/hero.mp4" type="video/mp4" />
+          </>
+        )}
       </video>
     </div>
   );
 
 }
 
-export default function Hero() {
+export default function Hero({ videoUrl, videoType, posterUrl }: VenueReelProps) {
   const scrollY = useScrollY();
   const bgOffset = scrollY * 0.25;
   const textOffset = scrollY * 0.5;
@@ -222,7 +254,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{ transform: `translateY(${bgOffset}px)` }}
       >
-        <VenueReel />
+        <VenueReel videoUrl={videoUrl} videoType={videoType} posterUrl={posterUrl} />
         {/* Soft amber bloom over the light source, screened on top of the
             footage so the neon reads as a warm glow rather than a flat
             bright strip. */}
