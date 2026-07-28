@@ -61,3 +61,11 @@ export const ALLOWED_VIDEO_EXT = ["mp4", "webm", "ogg", "mov", "m4v"];
 // Storage bucket, but share the same size/type limits as videos above —
 // no separate constants needed.
 
+// ─── Homepage hero background video ────────────────────────────────────
+// The looping clip behind the title on "/" — autoplays muted for every
+// visitor and is effectively the LCP background, so it's capped much
+// tighter than the general video library above. A heavy file here slows
+// down the whole homepage, not just one card in a carousel.
+export const MAX_HERO_VIDEO_BYTES = 25 * 1024 * 1024; // 25 MB
+export const MAX_HERO_VIDEO_MB = Math.round(MAX_HERO_VIDEO_BYTES / (1024 * 1024));
+

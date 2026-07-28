@@ -495,6 +495,9 @@ type HomepageContentRow = {
   statement_eyebrow: string | null;
   statement_heading: string | null;
   statement_body: string | null;
+  hero_video_url: string | null;
+  hero_video_type: string | null;
+  hero_poster_url: string | null;
 };
 
 export async function getHomepageContent(): Promise<HomepageContent> {
@@ -510,6 +513,11 @@ export async function getHomepageContent(): Promise<HomepageContent> {
     statementEyebrow: r.statement_eyebrow || homepageContentFallback.statementEyebrow,
     statementHeading: r.statement_heading || homepageContentFallback.statementHeading,
     statementBody: r.statement_body || homepageContentFallback.statementBody,
+    // Empty strings (not the fallback) — Hero.tsx falls back to the bundled
+    // footage itself whenever these are unset, so there's nothing to merge.
+    heroVideoUrl: r.hero_video_url || "",
+    heroVideoType: r.hero_video_type || "",
+    heroPosterUrl: r.hero_poster_url || "",
   };
 }
 

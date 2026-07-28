@@ -454,6 +454,13 @@ export type HomepageContent = {
   statementEyebrow: string;
   statementHeading: string;
   statementBody: string;
+  // Optional admin-uploaded replacement for the hero background video (see
+  // /admin/homepage). Empty string means "use the bundled /hero.webm +
+  // /hero.mp4 footage" — Hero.tsx treats an empty string the same as
+  // undefined.
+  heroVideoUrl: string;
+  heroVideoType: string;
+  heroPosterUrl: string;
 };
 
 // Placeholder copy — shown only until real text is saved in
@@ -464,6 +471,9 @@ export const homepageContentFallback: HomepageContent = {
   statementHeading: "Powerful sound, industrial surroundings, and people who come for the music",
   statementBody:
     "Rather than chasin trends, we invest in resident artists, immersive sound, and nights that evolve naturally - from the first record to the final track.",
+  heroVideoUrl: "",
+  heroVideoType: "",
+  heroPosterUrl: "",
 };
 
 export type Stat = {
