@@ -110,7 +110,15 @@ export default function Footer() {
 
           <div className="mt-12 sm:mt-16 pt-6 border-t border-[var(--line)] flex flex-wrap items-center justify-between gap-4">
             <p className="font-mono text-xs text-[var(--ink)]/60">
-              © {new Date().getFullYear()} Krantas. All rights reserved.
+              © {new Date().getFullYear()} Krantas. All rights reserved. · Powered by{" "}
+              <a
+                href="https://sweetnet.lt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkHover}
+              >
+                Sweetnet
+              </a>
             </p>
             <div className="flex gap-5 font-mono text-xs uppercase tracking-[0.12em] text-[var(--ink)]/70">
               <a
