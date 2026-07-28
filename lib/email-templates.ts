@@ -76,7 +76,7 @@ function shell(opts: { preheader: string; bodyHtml: string }) {
             </tr>
             <tr>
               <td style="padding:20px 32px;border-top:1px solid ${COLORS.line};font:11px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:${COLORS.inkDim};text-transform:uppercase;letter-spacing:0.1em;">
-                Krantas · Memelio Miestas, LT-91100 Klaipėda, Lietuva
+                Krantas · 92120 Klaipėda, Lietuva
               </td>
             </tr>
           </table>
