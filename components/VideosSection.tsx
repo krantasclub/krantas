@@ -7,7 +7,7 @@ import Reveal from "./Reveal";
 
 function PlayGlyph() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--ink)] group-hover:text-[#12100c] translate-x-[1px]">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--ink)] group-hover:text-[#12100c] translate-x-[1px]" aria-hidden="true">
       <path d="M8 5v14l11-7z" />
     </svg>
   );

@@ -125,11 +125,11 @@ function LiveNowPlayer({
         className="shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-full border border-[var(--ink)]/50 flex items-center justify-center hover:bg-[var(--ink)] hover:text-[#12100c] transition-colors"
       >
         {playing ? (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
           </svg>
         ) : (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>
         )}
@@ -341,11 +341,11 @@ export default function RadioSection({ initialData }: { initialData?: RadioData 
                   className="shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-full border border-[var(--ink)]/50 flex items-center justify-center hover:bg-[var(--ink)] hover:text-[#12100c] transition-colors disabled:opacity-40 disabled:pointer-events-none"
                 >
                   {featuredPlaying ? (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
                     </svg>
                   ) : (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   )}

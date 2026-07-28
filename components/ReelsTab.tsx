@@ -25,7 +25,7 @@ function CardFace({ reel }: { reel: Reel }) {
 
       <span className="absolute inset-0 flex items-center justify-center">
         <span className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-[var(--ink)]/60 bg-black/30 backdrop-blur-sm flex items-center justify-center group-hover:bg-[var(--accent)] group-hover:border-[var(--accent)] transition-colors">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--ink)] group-hover:text-[#12100c] translate-x-[1px]">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--ink)] group-hover:text-[#12100c] translate-x-[1px]" aria-hidden="true">
             <path d="M8 5v14l11-7z" />
           </svg>
         </span>
@@ -123,7 +123,7 @@ export default function ReelsTab({ initialReels }: { initialReels?: Reel[] }) {
           open ? "translate-x-full opacity-0 pointer-events-none" : "translate-x-0 opacity-100"
         }`}
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--accent)]">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--accent)]" aria-hidden="true">
           <path d="M8 5v14l11-7z" />
         </svg>
         <span
@@ -161,7 +161,7 @@ export default function ReelsTab({ initialReels }: { initialReels?: Reel[] }) {
             aria-label="Close reels"
             className="w-9 h-9 flex items-center justify-center border border-[var(--line)] hover:border-[var(--accent)] transition-colors"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--ink)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--ink)]" aria-hidden="true">
               <path d="M6 6l12 12M18 6L6 18" />
             </svg>
           </button>
