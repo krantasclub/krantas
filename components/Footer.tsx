@@ -49,8 +49,8 @@ export default function Footer() {
                 </p>
               </div>
               <p className="mt-3 max-w-xs text-sm text-[var(--ink)]/70">
-                Underground music by the shore. Techno, breaks and bass in
-                Klaipėda since the tide turned.
+                Naktinis klubas Klaipėdoje. Underground music by the shore —
+                techno, breaks and bass since the tide turned.
               </p>
               <div className="mt-5">
                 <TicketButtons variant="block" />
@@ -100,7 +100,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <a href="mailto:info@krantas.lt" className={linkHover}>
+                  <a href="mailto:info@krantasclub.lt" className={linkHover}>
                     info@krantasclub.lt
                   </a>
                 </p>

@@ -4,7 +4,10 @@ import { getAboutContent, getStats } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "The story behind Krantas — underground music by the shore in Klaipėda.",
+  description:
+    "Apie Krantas — naktinį klubą Klaipėdoje, uosto rajone. Underground music by the shore since the tide turned, built around residents and immersive sound.",
+  keywords: ["Krantas klubas Klaipėda", "naktinis klubas Klaipėda istorija", "apie Krantas"],
+  alternates: { canonical: "/about" },
 };
 
 export const revalidate = 60;

@@ -5,6 +5,7 @@ import { getReleases } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Releases",
   description: "Releases on Krantas Recordings.",
+  alternates: { canonical: "/releases" },
 };
 
 // Revalidate periodically so admin edits show up without needing a full

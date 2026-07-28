@@ -5,6 +5,7 @@ import { getProducts } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Store",
   description: "Krantas merch — restocks monthly.",
+  alternates: { canonical: "/store" },
 };
 
 export const revalidate = 60;

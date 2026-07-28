@@ -4,7 +4,10 @@ import { getEvents } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Events",
-  description: "Upcoming events at Krantas, Klaipėda.",
+  description:
+    "Artimiausi vakarėliai ir renginiai klube Krantas, Klaipėdoje — DJ setai, rezidentai, live pasirodymai.",
+  keywords: ["renginiai Klaipėda", "vakarėliai Klaipėda", "Krantas renginiai"],
+  alternates: { canonical: "/events" },
 };
 
 export const revalidate = 60;

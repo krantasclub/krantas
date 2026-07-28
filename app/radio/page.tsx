@@ -5,6 +5,7 @@ import { getRadioData } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Radio",
   description: "Krantas Radio — new transmissions every second week.",
+  alternates: { canonical: "/radio" },
 };
 
 // Live on-air status still polls client-side every 30s (see RadioSection),

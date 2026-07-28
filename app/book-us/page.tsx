@@ -5,6 +5,7 @@ import { getArtists } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Book us",
   description: "Book a DJ set, residency, or hire Krantas for a private event in Klaipėda.",
+  alternates: { canonical: "/book-us" },
 };
 
 export default async function BookUsPage() {

@@ -6,6 +6,7 @@ import { getArtists } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Artists",
   description: "Artists and residents on Krantas.",
+  alternates: { canonical: "/artists" },
 };
 
 export const revalidate = 60;
