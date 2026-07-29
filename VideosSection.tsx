@@ -29,11 +29,28 @@ function VideoCard({
   const isFile = video.source === "upload" || (video.source === "url" && isDirectVideoUrl(video.videoUrl));
   const isLinkOut = !youtubeId && !isFile;
 
+  // Sets are usually landscape, but a reel-style vertical clip uploaded here
+  // shouldn't get cropped into a 16:9 box — detect real orientation from
+  // whatever loads first (custom thumbnail image or the file's own video
+  // metadata) and switch the card's own shape to match. YouTube thumbnails
+  // are always landscape, so no detection needed there.
+  const [portrait, setPortrait] = useState(false);
+  const checkImgOrientation = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    if (img.naturalHeight > img.naturalWidth) setPortrait(true);
+  };
+  const checkVideoOrientation = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const v = e.currentTarget;
+    if (v.videoHeight > v.videoWidth) setPortrait(true);
+  };
+
   return (
     <Reveal delay={(index % 4) * 70} className="shrink-0 w-full sm:w-[340px] snap-center sm:snap-start">
       <div className="group">
         <div
-          className="relative aspect-video overflow-hidden border border-[var(--line)] group-hover:border-[var(--accent)] transition-colors"
+          className={`relative overflow-hidden border border-[var(--line)] group-hover:border-[var(--accent)] transition-colors ${
+            portrait ? "aspect-[9/16]" : "aspect-video"
+          }`}
           style={{ background: `linear-gradient(155deg, ${video.from}, ${video.to})` }}
         >
           {isLinkOut ? (
@@ -52,6 +69,7 @@ function VideoCard({
                   sizes="340px"
                   className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
+                  onLoad={checkImgOrientation}
                 />
               )}
               <div className="absolute inset-0 grain opacity-40" />
@@ -81,6 +99,7 @@ function VideoCard({
                 controls
                 autoPlay
                 playsInline
+                onLoadedMetadata={checkVideoOrientation}
               />
             )
           ) : (
@@ -93,6 +112,7 @@ function VideoCard({
                   sizes="340px"
                   className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
+                  onLoad={checkImgOrientation}
                 />
               ) : youtubeId ? (
                 <Image
@@ -113,6 +133,7 @@ function VideoCard({
                   playsInline
                   preload="metadata"
                   onLoadedMetadata={(e) => {
+                    checkVideoOrientation(e);
                     const v = e.currentTarget;
                     try {
                       v.currentTime = Math.min(0.5, (v.duration || 1) / 4);
