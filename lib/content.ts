@@ -461,6 +461,12 @@ export type HomepageContent = {
   heroVideoUrl: string;
   heroVideoType: string;
   heroPosterUrl: string;
+  // Site-wide "hide artists" switch (see /admin/homepage). When true: the
+  // Artists link disappears from the header nav, /artists redirects home,
+  // the homepage artist line-up is skipped, and the artist picker on the
+  // Book us form is left off. Lets the club run without a public roster
+  // (e.g. between resident line-up announcements) without touching code.
+  hideArtists: boolean;
 };
 
 // Placeholder copy — shown only until real text is saved in
@@ -474,6 +480,7 @@ export const homepageContentFallback: HomepageContent = {
   heroVideoUrl: "",
   heroVideoType: "",
   heroPosterUrl: "",
+  hideArtists: false,
 };
 
 export type Stat = {

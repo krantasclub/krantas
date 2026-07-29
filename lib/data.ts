@@ -498,6 +498,7 @@ type HomepageContentRow = {
   hero_video_url: string | null;
   hero_video_type: string | null;
   hero_poster_url: string | null;
+  hide_artists: boolean | null;
 };
 
 export async function getHomepageContent(): Promise<HomepageContent> {
@@ -518,6 +519,7 @@ export async function getHomepageContent(): Promise<HomepageContent> {
     heroVideoUrl: r.hero_video_url || "",
     heroVideoType: r.hero_video_type || "",
     heroPosterUrl: r.hero_poster_url || "",
+    hideArtists: r.hide_artists === true,
   };
 }
 
