@@ -14,10 +14,12 @@ export default function SiteChrome({
   children,
   initialEpisodes,
   initialReels,
+  hideArtists,
 }: {
   children: React.ReactNode;
   initialEpisodes?: RadioEpisode[];
   initialReels?: Reel[];
+  hideArtists?: boolean;
 }) {
   const pathname = usePathname();
   const isAdmin = pathname?.startsWith("/admin");
@@ -28,7 +30,7 @@ export default function SiteChrome({
 
   return (
     <>
-      <Nav initialEpisodes={initialEpisodes} />
+      <Nav initialEpisodes={initialEpisodes} hideArtists={hideArtists} />
       <main>{children}</main>
       <Footer />
       <ReelsTab initialReels={initialReels} />

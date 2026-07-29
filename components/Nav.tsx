@@ -12,7 +12,13 @@ import TicketButtons from "./TicketButtons";
 import SetsPlayer from "./SetsPlayer";
 import GoogleReviewBadge from "./GoogleReviewBadge";
 
-export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisode[] }) {
+export default function Nav({
+  initialEpisodes,
+  hideArtists,
+}: {
+  initialEpisodes?: RadioEpisode[];
+  hideArtists?: boolean;
+}) {
   const scrollY = useScrollY();
   const pathname = usePathname();
   const { t } = useLanguage();
@@ -24,13 +30,16 @@ export default function Nav({ initialEpisodes }: { initialEpisodes?: RadioEpisod
 
   // Hrefs are fixed routes (not translated — the URLs don't change per
   // language, only the visible label does).
-  const links = [
+  const allLinks = [
     { key: "releases", href: "/releases" },
     { key: "artists", href: "/artists" },
     { key: "events", href: "/events" },
     { key: "radio", href: "/radio" },
     { key: "store", href: "/store" },
   ] as const;
+  // Client-editable in /admin/homepage — lets the club run without a
+  // public artist roster (Artists link, homepage line-up, Book us picker).
+  const links = hideArtists ? allLinks.filter((l) => l.key !== "artists") : allLinks;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";

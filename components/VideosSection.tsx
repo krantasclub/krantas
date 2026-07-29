@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { videos as fallbackVideos, getYouTubeId, isDirectVideoUrl, type Video } from "@/lib/content";
 import Reveal from "./Reveal";
@@ -29,11 +29,49 @@ function VideoCard({
   const isFile = video.source === "upload" || (video.source === "url" && isDirectVideoUrl(video.videoUrl));
   const isLinkOut = !youtubeId && !isFile;
 
+  // Sets are usually landscape, but a reel-style vertical clip uploaded here
+  // shouldn't get cropped into a 16:9 box — detect real orientation from
+  // whatever loads first (custom thumbnail image or the file's own video
+  // metadata) and switch the card's own shape to match. YouTube thumbnails
+  // are always landscape, so no detection needed there.
+  const [portrait, setPortrait] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const previewVideoRef = useRef<HTMLVideoElement>(null);
+  const checkImgOrientation = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    if (img.naturalHeight > img.naturalWidth) setPortrait(true);
+  };
+  const checkVideoOrientation = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const v = e.currentTarget;
+    if (v.videoHeight > v.videoWidth) setPortrait(true);
+  };
+
+  // If the browser already had the thumbnail (or preview video) cached,
+  // it can finish loading before this component's onLoad/onLoadedMetadata
+  // handler gets attached — the browser's load event fires once, on its
+  // own timeline, not React's. That drops the orientation check entirely,
+  // so the card silently sticks with the default 16:9 box until something
+  // else (like pressing play, which mounts a fresh <video>) happens to
+  // re-trigger it. Re-check the already-resolved dimensions on mount to
+  // catch that case too.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0 && img.naturalHeight > img.naturalWidth) {
+      setPortrait(true);
+    }
+    const v = previewVideoRef.current;
+    if (v && v.readyState >= 1 && v.videoWidth > 0 && v.videoHeight > v.videoWidth) {
+      setPortrait(true);
+    }
+  }, []);
+
   return (
     <Reveal delay={(index % 4) * 70} className="shrink-0 w-full sm:w-[340px] snap-center sm:snap-start">
       <div className="group">
         <div
-          className="relative aspect-video overflow-hidden border border-[var(--line)] group-hover:border-[var(--accent)] transition-colors"
+          className={`relative overflow-hidden border border-[var(--line)] group-hover:border-[var(--accent)] transition-colors ${
+            portrait ? "aspect-[9/16]" : "aspect-video"
+          }`}
           style={{ background: `linear-gradient(155deg, ${video.from}, ${video.to})` }}
         >
           {isLinkOut ? (
@@ -46,12 +84,14 @@ function VideoCard({
             >
               {video.thumbnailUrl && (
                 <Image
+                  ref={imgRef}
                   src={video.thumbnailUrl}
                   alt=""
                   fill
                   sizes="340px"
                   className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
+                  onLoad={checkImgOrientation}
                 />
               )}
               <div className="absolute inset-0 grain opacity-40" />
@@ -80,18 +120,22 @@ function VideoCard({
                 poster={video.thumbnailUrl}
                 controls
                 autoPlay
+                playsInline
+                onLoadedMetadata={checkVideoOrientation}
               />
             )
           ) : (
             <button onClick={onPlay} aria-label={`Play ${video.title}`} className="absolute inset-0 w-full h-full">
               {video.thumbnailUrl ? (
                 <Image
+                  ref={imgRef}
                   src={video.thumbnailUrl}
                   alt=""
                   fill
                   sizes="340px"
                   className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   loading="lazy"
+                  onLoad={checkImgOrientation}
                 />
               ) : youtubeId ? (
                 <Image
@@ -106,12 +150,14 @@ function VideoCard({
                 // No thumbnail on file — show the video itself, seeked a
                 // touch past the start so the "poster" isn't a black frame.
                 <video
+                  ref={previewVideoRef}
                   className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                   src={video.videoUrl}
                   muted
                   playsInline
                   preload="metadata"
                   onLoadedMetadata={(e) => {
+                    checkVideoOrientation(e);
                     const v = e.currentTarget;
                     try {
                       v.currentTime = Math.min(0.5, (v.duration || 1) / 4);

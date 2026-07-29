@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import ArtistsSection from "@/components/ArtistsSection";
 import ArtistsGrid from "@/components/ArtistsGrid";
-import { getArtists } from "@/lib/data";
+import { getArtists, getHomepageContent } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Artists",
@@ -12,6 +13,11 @@ export const metadata: Metadata = {
 export const revalidate = 60;
 
 export default async function ArtistsPage() {
+  const homepageContent = await getHomepageContent();
+  // Toggled off from /admin/homepage — the direct URL shouldn't keep
+  // working just because it's no longer linked from the header.
+  if (homepageContent.hideArtists) redirect("/");
+
   // Fetched once here and handed to both sections below — the old version
   // had each section run its own identical client-side fetch.
   const artists = await getArtists();

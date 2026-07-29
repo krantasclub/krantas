@@ -225,7 +225,9 @@ export default async function RootLayout({
       </head>
       <body className={`${anton.variable} ${inter.variable} ${plexMono.variable}`}>
         <LanguageProvider initialLocale={initialLocale}>
-          <SiteChrome initialEpisodes={episodes} initialReels={reels}>{children}</SiteChrome>
+          <SiteChrome initialEpisodes={episodes} initialReels={reels} hideArtists={homepageContent.hideArtists}>
+            {children}
+          </SiteChrome>
         </LanguageProvider>
       </body>
     </html>

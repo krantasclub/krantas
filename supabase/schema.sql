@@ -892,6 +892,7 @@ create table if not exists public.homepage_content (
   statement_eyebrow  text,
   statement_heading  text,
   statement_body     text,
+  hide_artists       boolean not null default false,
   updated_at         timestamptz not null default now(),
   constraint homepage_content_singleton check (id = 1)
 );

@@ -41,7 +41,7 @@ export default async function Home() {
         posterUrl={homepageContent.heroPosterUrl}
       />
       <Marquee text={homepageContent.marqueeText} />
-      <ArtistsSection initialRoster={artists} />
+      {!homepageContent.hideArtists && <ArtistsSection initialRoster={artists} />}
       <VideosSection initialItems={videos} />
       <StatementSection
         eyebrow={homepageContent.statementEyebrow}

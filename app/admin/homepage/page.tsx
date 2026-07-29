@@ -17,6 +17,7 @@ type HomepageRow = {
   hero_video_url: string;
   hero_video_type: string;
   hero_poster_url: string;
+  hide_artists: boolean;
 };
 
 const EMPTY: HomepageRow = {
@@ -27,6 +28,7 @@ const EMPTY: HomepageRow = {
   hero_video_url: "",
   hero_video_type: "",
   hero_poster_url: "",
+  hide_artists: false,
 };
 
 // Same "videos" Storage bucket the Videos admin page uses for filmed sets —
@@ -172,6 +174,7 @@ export default function HomepageAdmin() {
             hero_video_url: data.hero_video_url ?? "",
             hero_video_type: data.hero_video_type ?? "",
             hero_poster_url: data.hero_poster_url ?? "",
+            hide_artists: data.hide_artists ?? false,
           });
         setFetching(false);
       });
@@ -262,6 +265,23 @@ export default function HomepageAdmin() {
         </div>
 
         {error && <ErrorBox message={error} onDismiss={() => setError(null)} />}
+
+        <div className={card + " mb-8"}>
+          <p className="text-xs text-[#9aa19d] mb-5 leading-relaxed">
+            Hides the artist roster across the whole site: the &quot;Artists&quot; link disappears from the header,
+            the line-up on the homepage is skipped, the Artists page itself redirects home, and the &quot;Which
+            artist&quot; picker on the Book us form is left off.
+          </p>
+          <label className="inline-flex items-center gap-2.5 cursor-pointer">
+            <input
+              type="checkbox"
+              className="w-4 h-4 accent-[#ff8a1e]"
+              checked={row.hide_artists}
+              onChange={(e) => setRow({ ...row, hide_artists: e.target.checked })}
+            />
+            <span className="text-xs text-[#ece7dd] tracking-[0.04em]">Hide artists site-wide</span>
+          </label>
+        </div>
 
         <div className={card + " mb-8"}>
           <p className="text-xs text-[#9aa19d] mb-5 leading-relaxed">
