@@ -5,36 +5,37 @@ import Link from "next/link";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import { useLanguage } from "@/components/LanguageProvider";
 
-const sections = [
-  {
-    group: "Site content",
-    items: [
-      { href: "/admin/homepage", icon: "▬", label: "Homepage", desc: "Scrolling strip text and the statement section below the videos" },
-      { href: "/admin/releases", icon: "◈", label: "Releases", desc: "Label discography, cover art and tracklists" },
-      { href: "/admin/artists", icon: "♫", label: "Artists", desc: "Roster shown on the homepage and Artists page" },
-      { href: "/admin/events", icon: "◆", label: "Events", desc: "Featured, upcoming and past line-up" },
-      { href: "/admin/radio", icon: "▶", label: "Radio", desc: "Upload tracks for the Radio page and header play button" },
-      { href: "/admin/radio/live", icon: "◉", label: "Radio — live desk", desc: "On-air toggle, now playing, stream link, schedule and listen links" },
-      { href: "/admin/store", icon: "◫", label: "Store", desc: "Products shown on the Store page" },
-      { href: "/admin/orders", icon: "✉", label: "Orders", desc: "Orders placed through the Store page" },
-      { href: "/admin/reels", icon: "❖", label: "Reels", desc: "Upload clips or paste Facebook/other reel links for the sticky Reels tab" },
-      { href: "/admin/videos", icon: "▣", label: "Videos", desc: "Upload sets or paste YouTube/other links, tag by artist and genre" },
-      { href: "/admin/gallery", icon: "▤", label: "Gallery", desc: "Venue photo strip on the homepage — upload, reorder, alt text" },
-      { href: "/admin/inquiries", icon: "✎", label: "Inquiries", desc: "Submissions from Contact, Book us and Lost & found" },
-      { href: "/admin/about", icon: "●", label: "About", desc: "Story, heading, photo and the stats strip on the About page" },
-    ],
-  },
-  {
-    group: "Account",
-    items: [
-      { href: "/admin/login", icon: "⚿", label: "Change login", desc: "Manage this from the Supabase dashboard" },
-    ],
-  },
-];
-
 export default function AdminPage() {
   const router = useRouter();
   const { t } = useLanguage();
+
+  const sections = [
+    {
+      group: t("admin.groupSiteContent"),
+      items: [
+        { href: "/admin/homepage", icon: "▬", label: t("admin.homepageLabel"), desc: t("admin.homepageDesc") },
+        { href: "/admin/releases", icon: "◈", label: t("admin.releasesLabel"), desc: t("admin.releasesDesc") },
+        { href: "/admin/artists", icon: "♫", label: t("admin.artistsLabel"), desc: t("admin.artistsDesc") },
+        { href: "/admin/events", icon: "◆", label: t("admin.eventsLabel"), desc: t("admin.eventsDesc") },
+        { href: "/admin/radio", icon: "▶", label: t("admin.radioLabel"), desc: t("admin.radioDesc") },
+        { href: "/admin/radio/live", icon: "◉", label: t("admin.radioLiveLabel"), desc: t("admin.radioLiveDesc") },
+        { href: "/admin/store", icon: "◫", label: t("admin.storeLabel"), desc: t("admin.storeDesc") },
+        { href: "/admin/orders", icon: "✉", label: t("admin.ordersLabel"), desc: t("admin.ordersDesc") },
+        { href: "/admin/reels", icon: "❖", label: t("admin.reelsLabel"), desc: t("admin.reelsDesc") },
+        { href: "/admin/videos", icon: "▣", label: t("admin.videosLabel"), desc: t("admin.videosDesc") },
+        { href: "/admin/gallery", icon: "▤", label: t("admin.galleryLabel"), desc: t("admin.galleryDesc") },
+        { href: "/admin/inquiries", icon: "✎", label: t("admin.inquiriesLabel"), desc: t("admin.inquiriesDesc") },
+        { href: "/admin/about", icon: "●", label: t("admin.aboutLabel"), desc: t("admin.aboutDesc") },
+      ],
+    },
+    {
+      group: t("admin.groupAccount"),
+      items: [
+        { href: "/admin/login", icon: "⚿", label: t("admin.changeLoginLabel"), desc: t("admin.changeLoginDesc") },
+      ],
+    },
+  ];
+
   async function handleLogout() {
     await supabase.auth.signOut();
     router.push("/admin/login");

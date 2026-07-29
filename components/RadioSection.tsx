@@ -12,6 +12,7 @@ import {
   type RadioLiveStatus,
 } from "@/lib/content";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import SectionHeading from "./SectionHeading";
 import AudioVisualizer, {
   VisualModePicker,
@@ -64,6 +65,7 @@ function LiveNowPlayer({
   onAudioReady?: (el: HTMLAudioElement | null) => void;
   onPlayingChange?: (playing: boolean) => void;
 }) {
+  const { t } = useLanguage();
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -78,7 +80,7 @@ function LiveNowPlayer({
   if (!live.streamUrl) {
     return (
       <div className="font-mono text-xs uppercase tracking-[0.14em] text-[var(--ink)]/70">
-        On air now — stream link coming shortly
+        {t("sections.radioOnAirSoon")}
       </div>
     );
   }
@@ -88,7 +90,7 @@ function LiveNowPlayer({
       <div className="w-full max-w-[520px] aspect-video border border-[var(--ink)]/30 bg-black/20">
         <iframe
           src={live.streamUrl}
-          title="Live broadcast"
+          title={t("sections.radioLiveTitle")}
           allow="autoplay"
           className="w-full h-full"
         />
@@ -209,6 +211,7 @@ export default function RadioSection({ initialData }: { initialData?: RadioData 
     };
   }, []);
 
+  const { t } = useLanguage();
   const featured = episodes[0];
   if (!featured) return null;
 
@@ -216,9 +219,9 @@ export default function RadioSection({ initialData }: { initialData?: RadioData 
     <section id="radio" className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
         <SectionHeading
-          eyebrow="Krantas Radio"
-          title="Radio"
-          note="New transmissions every second week"
+          eyebrow={t("sections.radioEyebrow")}
+          title={t("sections.radioTitle")}
+          note={t("sections.radioNote")}
         />
 
         {!live.isLive && (

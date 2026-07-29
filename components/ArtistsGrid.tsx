@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { artists as fallbackArtists, type Artist } from "@/lib/content";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import SectionHeading from "./SectionHeading";
 import ArtistModal from "./ArtistModal";
 
@@ -49,13 +50,14 @@ function ArtistCard({ a, index, onOpen }: { a: Artist; index: number; onOpen: (a
 // Photo-card roster used only on the dedicated /artists page. The
 // homepage keeps the compact text line-up (ArtistsSection.tsx).
 export default function ArtistsGrid({ initialRoster }: { initialRoster?: Artist[] }) {
+  const { t } = useLanguage();
   const [roster] = useState<Artist[]>(initialRoster ?? fallbackArtists);
   const [selected, setSelected] = useState<Artist | null>(null);
 
   return (
     <section id="artists" className="relative bg-[var(--bg)] px-5 sm:px-8 py-14 sm:py-20">
       <div className="max-w-[1600px] mx-auto">
-        <SectionHeading eyebrow="In the booth" title="Meet the Lineup" note="Portraits & bios" />
+        <SectionHeading eyebrow={t("sections.artistsEyebrow")} title={t("sections.artistsTitle")} note={t("sections.artistsNote")} />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-8">
           {roster.map((a, i) => (

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { events as fallbackEvents, type Poster } from "@/lib/content";
 import { PAYSERA_URL, RA_URL } from "@/lib/tickets";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import SectionHeading from "./SectionHeading";
 import TicketButtons from "./TicketButtons";
 import EventModal from "./EventModal";
@@ -78,6 +79,7 @@ export default function EventsSection({ initialPosters }: { initialPosters?: Pos
     .filter((p) => p.eventDate < today)
     .sort((a, b) => b.eventDate.localeCompare(a.eventDate));
 
+  const { t } = useLanguage();
   const featured = upcoming.find((p) => p.featured);
   const gridUpcoming = featured ? upcoming.filter((p) => p.id !== featured.id) : upcoming;
 
@@ -85,15 +87,15 @@ export default function EventsSection({ initialPosters }: { initialPosters?: Pos
     <section id="events" className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
         <SectionHeading
-          eyebrow="What's on"
-          title="Upcoming Events"
-          note="Doors 23:00 · Klaipėda seafront district"
+          eyebrow={t("sections.eventsEyebrow")}
+          title={t("sections.eventsTitle")}
+          note={t("sections.eventsNote")}
         />
 
         <Reveal>
           <div className="mb-10 sm:mb-14 flex flex-wrap items-center justify-between gap-4 border border-[var(--line)] px-5 py-4 sm:px-6 sm:py-5">
             <p className="font-mono text-[11px] sm:text-xs uppercase tracking-[0.16em] text-[var(--ink-dim)]">
-              Get tickets via
+              {t("sections.eventsGetTicketsVia")}
             </p>
             <TicketButtons variant="nav" paysera={PAYSERA_URL} ra={RA_URL} />
             <div className="md:hidden w-full">
@@ -124,7 +126,7 @@ export default function EventsSection({ initialPosters }: { initialPosters?: Pos
                 <div className="absolute inset-0 grain opacity-60" />
               </div>
               <div className="p-6 sm:p-10 flex flex-col justify-center bg-[var(--bg-raised)]">
-                <p className="eyebrow mb-3 text-[var(--accent)]">Featured · {featured.date}</p>
+                <p className="eyebrow mb-3 text-[var(--accent)]">{t("sections.eventsFeatured")} · {featured.date}</p>
                 <h3 className="font-display text-4xl sm:text-5xl leading-[0.9] text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors">
                   {featured.headline}
                 </h3>
@@ -142,10 +144,10 @@ export default function EventsSection({ initialPosters }: { initialPosters?: Pos
                     onClick={(e) => e.stopPropagation()}
                     className="inline-flex w-fit items-center gap-2 border border-[var(--accent)] text-[var(--accent)] font-mono text-xs tracking-[0.18em] uppercase px-5 py-3 hover:bg-[var(--accent)] hover:text-[#12100c] transition-colors"
                   >
-                    Get tickets →
+                    {t("sections.eventsGetTickets")}
                   </a>
                   <span className="font-mono text-xs tracking-[0.18em] uppercase text-[var(--ink-dim)] group-hover:text-[var(--accent)] transition-colors">
-                    Details →
+                    {t("sections.eventsDetails")}
                   </span>
                 </div>
               </div>
@@ -163,13 +165,13 @@ export default function EventsSection({ initialPosters }: { initialPosters?: Pos
 
         {gridUpcoming.length === 0 && !featured && (
           <p className="font-mono text-sm text-[var(--ink-dim)]">
-            No upcoming events right now — check back soon.
+            {t("sections.eventsNoUpcoming")}
           </p>
         )}
 
         {past.length > 0 && (
           <div className="mt-16 sm:mt-24">
-            <SectionHeading eyebrow="Archive" title="Past Events" />
+            <SectionHeading eyebrow={t("sections.eventsArchiveEyebrow")} title={t("sections.eventsArchiveTitle")} />
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
               {past.map((ev, i) => (
                 <EventCard key={ev.id} ev={ev} index={i} past onOpen={(ev) => setSelected({ ev, past: true })} />

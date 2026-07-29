@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { isDirectReelUrl, type Reel } from "@/lib/content";
 import ReelLightbox from "./ReelLightbox";
+import { useLanguage } from "./LanguageProvider";
 
 // Shared visual chrome for a reel card — the only difference between
 // the two variants below is what happens on click/tap.
@@ -85,6 +86,7 @@ function ReelCard({ reel, onPlay }: { reel: Reel; onPlay: () => void }) {
 // so any number of reels stays reachable without growing the panel —
 // it just scrolls, same idea as a long nav list.
 export default function ReelsTab({ initialReels }: { initialReels?: Reel[] }) {
+  const { t } = useLanguage();
   const reels = initialReels ?? [];
   const [open, setOpen] = useState(false);
   const [playing, setPlaying] = useState<Reel | null>(null);
@@ -176,7 +178,7 @@ export default function ReelsTab({ initialReels }: { initialReels?: Reel[] }) {
         ) : (
           <div className="flex-1 flex items-center justify-center px-6 text-center">
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--ink)]/50">
-              Coming soon
+              {t("sections.reelsComingSoon")}
             </p>
           </div>
         )}

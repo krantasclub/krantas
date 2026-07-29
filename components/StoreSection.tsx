@@ -3,17 +3,19 @@
 import { useState } from "react";
 import { merch as fallbackMerch, type Merch } from "@/lib/content";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import SectionHeading from "./SectionHeading";
 import StoreOrderModal from "./StoreOrderModal";
 
 export default function StoreSection({ initialProducts }: { initialProducts?: Merch[] }) {
+  const { t } = useLanguage();
   const [products] = useState<Merch[]>(initialProducts ?? fallbackMerch);
   const [selected, setSelected] = useState<Merch | null>(null);
 
   return (
     <section id="store" className="relative bg-[var(--bg-raised)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
-        <SectionHeading eyebrow="Take it home" title="Store" note="Merch drops restock monthly" />
+        <SectionHeading eyebrow={t("sections.storeEyebrow")} title={t("sections.storeTitle")} note={t("sections.storeNote")} />
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
           {products.map((m, i) => {

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { radioEpisodes as fallbackEpisodes, type RadioEpisode } from "@/lib/content";
+import { useLanguage } from "./LanguageProvider";
 
 /**
  * Persistent "listen while you browse" player. Lives in <Nav>, which
@@ -17,6 +18,7 @@ import { radioEpisodes as fallbackEpisodes, type RadioEpisode } from "@/lib/cont
  * correct on first paint — no client fetch-and-swap here.
  */
 export default function SetsPlayer({ initialEpisodes }: { initialEpisodes?: RadioEpisode[] }) {
+  const { t } = useLanguage();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [playing, setPlaying] = useState(false);
@@ -112,8 +114,8 @@ export default function SetsPlayer({ initialEpisodes }: { initialEpisodes?: Radi
 
       <button
         onClick={toggle}
-        aria-label={playing ? "Pause Krantas set" : "Play Krantas set"}
-        title={errored ? "Couldn't load this set" : current.title}
+        aria-label={playing ? t("sections.setsPauseAria") : t("sections.setsPlayAria")}
+        title={errored ? t("sections.setsCouldntLoad") : current.title}
         className={`shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center transition-colors ${
           playing
             ? "bg-[var(--accent)] text-[#12100c]"
@@ -140,7 +142,7 @@ export default function SetsPlayer({ initialEpisodes }: { initialEpisodes?: Radi
             playing ? "text-[var(--accent)]" : "text-[var(--ink-dim)]"
           }`}
         >
-          {errored ? "Unavailable" : playing ? "On air" : "Krantas Sets"}
+          {errored ? t("sections.setsUnavailable") : playing ? t("sections.setsOnAir") : t("sections.setsKrantasSets")}
         </span>
         <span className="font-mono text-[10px] uppercase tracking-[0.02em] text-[var(--ink)] truncate w-full">
           {current.title}
@@ -150,9 +152,9 @@ export default function SetsPlayer({ initialEpisodes }: { initialEpisodes?: Radi
       {playlist.length > 1 && (
         <button
           onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Choose a set"
+          aria-label={t("sections.setsChooseASet")}
           aria-expanded={menuOpen}
-          title="Choose a set"
+          title={t("sections.setsChooseASet")}
           className={`shrink-0 w-5 h-5 flex items-center justify-center transition-colors ${
             menuOpen ? "text-[var(--accent)]" : "text-[var(--ink-dim)] hover:text-[var(--accent)]"
           }`}
@@ -186,8 +188,8 @@ export default function SetsPlayer({ initialEpisodes }: { initialEpisodes?: Radi
           {playlist.length > 1 && (
             <button
               onClick={() => playNext()}
-              aria-label="Next set"
-              title="Next set"
+              aria-label={t("sections.setsNextSet")}
+              title={t("sections.setsNextSet")}
               className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[var(--ink-dim)] hover:text-[var(--accent)] transition-colors"
             >
               <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

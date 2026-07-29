@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { releases as fallbackReleases, getYouTubeId, type Release, type ReleaseTrack } from "@/lib/content";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import SectionHeading from "./SectionHeading";
 
 function TrackRow({ track }: { track: ReleaseTrack }) {
@@ -56,22 +57,23 @@ export default function ReleasesSection({ initialItems }: { initialItems?: Relea
   // the "coming soon" empty state below — `fallbackReleases` is only used
   // as a last-resort safety net if this component is ever rendered without
   // the prop at all.
+  const { t } = useLanguage();
   const [items] = useState<Release[]>(initialItems ?? fallbackReleases);
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
     <section id="releases" className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
-        <SectionHeading eyebrow="On the label" title="Releases" note="Krantas Recordings" />
+        <SectionHeading eyebrow={t("sections.releasesEyebrow")} title={t("sections.releasesTitle")} note={t("sections.releasesNote")} />
 
         <div className="border-t border-[var(--line)]">
           {items.length === 0 && (
             <div className="py-16 sm:py-24 text-center">
               <p className="font-display text-2xl sm:text-3xl text-[var(--ink)]/80">
-                Releases coming soon
+                {t("sections.releasesComingSoonTitle")}
               </p>
               <p className="mt-3 font-mono text-xs sm:text-sm uppercase tracking-[0.12em] text-[var(--ink-dim)]">
-                Nothing on the label yet — check back shortly.
+                {t("sections.releasesComingSoonBody")}
               </p>
             </div>
           )}

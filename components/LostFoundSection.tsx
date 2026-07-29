@@ -3,12 +3,14 @@
 import { useState, type FormEvent } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 
 const INPUT_CLS =
   "w-full bg-transparent border-0 border-b border-[var(--line-strong)] text-[var(--ink)] py-2 text-sm outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[var(--ink-dim)]";
 const LABEL_CLS = "block font-mono text-[9px] uppercase tracking-[0.16em] text-[var(--ink-dim)] mb-1.5";
 
 export default function LostFoundSection() {
+  const { t } = useLanguage();
   const [itemDescription, setItemDescription] = useState("");
   const [dateLost, setDateLost] = useState("");
   const [location, setLocation] = useState("");
@@ -42,7 +44,7 @@ export default function LostFoundSection() {
   return (
     <section className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
-        <SectionHeading eyebrow="Left something behind?" title="Lost & found" note="Tell us what you lost and we'll reach out if it turns up." />
+        <SectionHeading eyebrow={t("sections.lostFoundEyebrow")} title={t("sections.lostFoundTitle")} note={t("sections.lostFoundNote")} />
 
         <div className="grid gap-12 sm:gap-16 md:grid-cols-[1.1fr_0.9fr] items-start">
           <Reveal>
@@ -112,7 +114,7 @@ export default function LostFoundSection() {
 
           <Reveal delay={120}>
             <div className="border border-[var(--line)] p-6 sm:p-8">
-              <p className="eyebrow mb-4">How it works</p>
+              <p className="eyebrow mb-4">{t("sections.lostFoundHowItWorks")}</p>
               <ul className="space-y-3 text-sm text-[var(--ink)]/85 leading-relaxed">
                 <li>Found items are kept behind the bar for 30 days.</li>
                 <li>We&apos;ll email or call you if something matching your report is handed in.</li>

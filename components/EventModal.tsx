@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import type { Poster } from "@/lib/content";
 import { PAYSERA_URL } from "@/lib/tickets";
+import { useLanguage } from "./LanguageProvider";
 
 export default function EventModal({
   ev,
@@ -13,6 +14,7 @@ export default function EventModal({
   past?: boolean;
   onClose: () => void;
 }) {
+  const { t } = useLanguage();
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -105,7 +107,7 @@ export default function EventModal({
               rel="noopener noreferrer"
               className="inline-flex w-fit items-center gap-2 border border-[var(--accent)] text-[var(--accent)] font-mono text-xs tracking-[0.18em] uppercase px-5 py-3 hover:bg-[var(--accent)] hover:text-[#12100c] transition-colors"
             >
-              Get tickets →
+              {t("sections.eventsGetTickets")}
             </a>
           )}
         </div>

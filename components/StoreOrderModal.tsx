@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { Merch } from "@/lib/content";
 import StoreLockerSelector, { type LockerPoint } from "./StoreLockerSelector";
+import { useLanguage } from "./LanguageProvider";
 
 const INPUT_CLS =
   "w-full bg-transparent border-0 border-b border-[var(--line-strong)] text-[var(--ink)] py-2 text-sm outline-none focus:border-[var(--accent)] transition-colors placeholder:text-[var(--ink-dim)]";
@@ -15,6 +16,7 @@ const DELIVERY_METHODS = [
 ] as const;
 
 export default function StoreOrderModal({ product, onClose }: { product: Merch; onClose: () => void }) {
+  const { t } = useLanguage();
   const [size, setSize] = useState(product.sizes?.[0] ?? "");
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
@@ -127,7 +129,7 @@ export default function StoreOrderModal({ product, onClose }: { product: Merch; 
 
           {product.soldOut ? (
             <p className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--ink-dim)] border border-[var(--line-strong)] px-4 py-3 inline-block">
-              Sold out — check back on the next restock
+              {t("sections.storeSoldOut")}
             </p>
           ) : done ? (
             <div className="border border-[var(--accent)]/50 px-4 py-4">

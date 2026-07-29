@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 import type { Artist } from "@/lib/content";
 
 const INPUT_CLS =
@@ -16,6 +17,7 @@ const REQUEST_TYPES = [
 ] as const;
 
 export default function BookUsSection({ artists = [] }: { artists?: Artist[] }) {
+  const { t } = useLanguage();
   const [requestType, setRequestType] = useState<(typeof REQUEST_TYPES)[number]["id"]>("dj_booking");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -61,9 +63,9 @@ export default function BookUsSection({ artists = [] }: { artists?: Artist[] }) 
     <section className="relative bg-[var(--bg)] px-5 sm:px-8 py-20 sm:py-28">
       <div className="max-w-[1600px] mx-auto">
         <SectionHeading
-          eyebrow="Play here / hire us"
-          title="Book us"
-          note="Booking a set, a residency, or hiring the room for a private event — tell us about it."
+          eyebrow={t("sections.bookUsEyebrow")}
+          title={t("sections.bookUsTitle")}
+          note={t("sections.bookUsNote")}
         />
 
         <div className="max-w-2xl">
@@ -82,18 +84,18 @@ export default function BookUsSection({ artists = [] }: { artists?: Artist[] }) 
                 <div className="mb-5">
                   <label className={LABEL_CLS}>What&apos;s this about</label>
                   <div className="flex flex-wrap gap-2">
-                    {REQUEST_TYPES.map((t) => (
+                    {REQUEST_TYPES.map((rt) => (
                       <button
                         type="button"
-                        key={t.id}
-                        onClick={() => setRequestType(t.id)}
+                        key={rt.id}
+                        onClick={() => setRequestType(rt.id)}
                         className={`font-mono text-xs uppercase tracking-[0.08em] px-3 py-1.5 border transition-colors ${
-                          requestType === t.id
+                          requestType === rt.id
                             ? "border-[var(--accent)] text-[var(--accent)]"
                             : "border-[var(--line-strong)] text-[var(--ink-dim)] hover:text-[var(--ink)]"
                         }`}
                       >
-                        {t.label}
+                        {rt.label}
                       </button>
                     ))}
                   </div>

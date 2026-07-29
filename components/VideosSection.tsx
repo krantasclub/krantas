@@ -4,6 +4,7 @@ import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { videos as fallbackVideos, getYouTubeId, isDirectVideoUrl, type Video } from "@/lib/content";
 import Reveal from "./Reveal";
+import { useLanguage } from "./LanguageProvider";
 
 function PlayGlyph() {
   return (
@@ -159,6 +160,7 @@ function FilterPill({ active, onClick, children }: { active: boolean; onClick: (
 }
 
 export default function VideosSection({ initialItems }: { initialItems?: Video[] }) {
+  const { t } = useLanguage();
   const [items] = useState<Video[]>(initialItems ?? fallbackVideos);
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [genre, setGenre] = useState<string | null>(null);
@@ -193,7 +195,7 @@ export default function VideosSection({ initialItems }: { initialItems?: Video[]
           <div className="flex flex-wrap items-center gap-2 mb-6 sm:mb-8">
             {genres.length > 0 && (
               <div className="flex flex-wrap items-center gap-1.5">
-                <FilterPill active={genre === null} onClick={() => setGenre(null)}>All genres</FilterPill>
+                <FilterPill active={genre === null} onClick={() => setGenre(null)}>{t("sections.videosAllGenres")}</FilterPill>
                 {genres.map((g) => (
                   <FilterPill key={g} active={genre === g} onClick={() => setGenre(genre === g ? null : g)}>
                     {g}
@@ -203,7 +205,7 @@ export default function VideosSection({ initialItems }: { initialItems?: Video[]
             )}
             {artists.length > 0 && (
               <div className="flex flex-wrap items-center gap-1.5 sm:ml-4">
-                <FilterPill active={artist === null} onClick={() => setArtist(null)}>All artists</FilterPill>
+                <FilterPill active={artist === null} onClick={() => setArtist(null)}>{t("sections.videosAllArtists")}</FilterPill>
                 {artists.map((a) => (
                   <FilterPill key={a} active={artist === a} onClick={() => setArtist(artist === a ? null : a)}>
                     {a}
